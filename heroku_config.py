@@ -25,6 +25,7 @@ class Var(object):
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", "root")
     AUTH_TOKEN_DATA = os.environ.get("AUTH_TOKEN_DATA", None)
     GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", None)
+    GENIUS = os.environ.get("GENIUS", None)
     MAX_FLOOD_IN_P_M_s = int(os.environ.get("MAX_FLOOD_IN_P_M_s", 3))
     if AUTH_TOKEN_DATA != None:
         if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
