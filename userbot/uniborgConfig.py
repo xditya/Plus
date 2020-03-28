@@ -106,6 +106,8 @@ if ENV:
         MONGO_URI = os.environ.get("MONGO_URI", None)
         #Lydia API
         LYDIA_API = os.environ.get("LYDIA_API",None)
+        GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", None)
+        GENIUS = os.environ.get("GENIUS", None)
 else:
     class Config(object):
         DB_URI = None
