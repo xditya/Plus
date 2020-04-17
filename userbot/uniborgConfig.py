@@ -108,6 +108,7 @@ if ENV:
         LYDIA_API = os.environ.get("LYDIA_API",None)
         GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", None)
         GENIUS = os.environ.get("GENIUS", None)
+        HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
 else:
     class Config(object):
         DB_URI = None
