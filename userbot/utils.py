@@ -231,13 +231,6 @@ def register(**args):
 
     return decorator
 
-def prettyjson(obj, indent=2, maxlinelength=80):
-    """Renders JSON content with indentation and line splits/concatenations to fit maxlinelength.
-    Only dicts, lists and basic types are supported"""
-
-    items, _ = getsubitems(obj, itemkey="", islast=True, maxlinelength=maxlinelength - indent, indent=indent)
-    return indentitems(items, indent, level=0)
-
 
 def errors_handler(func):
     async def wrapper(event):
