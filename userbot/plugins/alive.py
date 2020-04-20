@@ -14,6 +14,6 @@ async def amireallyalive(alive):
     await alive.edit("   **Welcome To X-Tra-TG**\n\n"
     				 "` 🔸 Telethon version:` **1.11.3**\n` 🔹 Python:` **3.6.10** \n` 🔸 Fork by:` @buddhhu\n"
                      "` 🔹 Bot created by:` [༺•|•𝙺𝚄𝙼𝙰𝚁•𝙰𝙼𝙸𝚃•|•༻](tg://user?id=667805879)\n"
-                     "` 🔸 Database Status: **All OK 👌!**\n`"
+                     "` 🔸 Database Status:` **All OK 👌!**\n"
                      f"` 🔹 My peru owner`: {DEFAULTUSER}\n\n"
                      "           [Deploy this userbot Now](https://github.com/amitsharma123234/X-tra-Telegram)")
