@@ -83,9 +83,9 @@ def time_formatter(milliseconds: int) -> str:
     return tmp[:-2]
 
 
-@register(pattern=r".download(?: |$)(.*)", outgoing=True)
+@register(pattern=r".dl(?: |$)(.*)", outgoing=True)
 async def download(target_file):
-    """ For .download command, download files to the userbot's server. """
+    """ For .dl command, download files to the userbot's server. """
     await target_file.edit("Processing ...")
     input_str = target_file.pattern_match.group(1)
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
@@ -234,9 +234,9 @@ async def uploadir(udir_event):
         await udir_event.edit("404: Directory Not Found")
 
 
-@register(pattern=r".upload (.*)", outgoing=True)
+@register(pattern=r".ul (.*)", outgoing=True)
 async def upload(u_event):
-    """ For .upload command, allows you to upload a file from the userbot's server """
+    """ For .ul command, allows you to upload a file from the userbot's server """
     await u_event.edit("Processing ...")
     input_str = u_event.pattern_match.group(1)
     if input_str in ("userbot.session", "config.env"):
