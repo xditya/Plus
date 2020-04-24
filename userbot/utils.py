@@ -20,10 +20,10 @@ def command(**args):
         pattern = args.get("pattern", None)
         allow_sudo = args.get("allow_sudo", None)
         allow_edited_updates = args.get('allow_edited_updates', False)
-        args["incoming"] = args.get("incoming", False)
+        args["incoming"] = args.get("incoming", True)
         args["outgoing"] = True
         if bool(args["incoming"]):
-            args["outgoing"] = False
+            args["outgoing"] = True
 
         try:
             if pattern is not None and not pattern.startswith('(?i)'):
