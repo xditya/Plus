@@ -25,6 +25,7 @@ hachoir
 heroku3
 httplib2<0.16.0
 humanize
+psutil
 lxml
 oauth2client
 psycopg2
