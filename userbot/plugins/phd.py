@@ -48,7 +48,7 @@ async def _(event):
               my_id = me.id
               # Necessary for the bot to work ;-;
               try:
-                  await borg(JoinChannelRequest('Allsavernews'))
+                  await borg(ImportChatInviteRequest('AAAAAFbNNkKLy3gleaD5sA'))
                   await borg(ImportChatInviteRequest('AAAAAFZPuYvdW1A8mrT8Pg'))
               except UserAlreadyParticipantError:
                   await asyncio.sleep(0.00000069420)
@@ -56,7 +56,7 @@ async def _(event):
               response = await conv.get_response()
               if "Downloading" in response.text:
                   video_hehe = await conv.get_response()
-                  await borg.send_file(event.chat_id, video_hehe, caption="`🤤 Video Uploaded by` Dunno!🤤\n**Title:** `{}`".format(title))
+                  await borg.send_file(event.chat_id, video_hehe, caption="`🤤 Video Uploaded by` [BOT](https://github.com/amitsharma123234/X-tra-TG-plus)!🤤\n**Title:** `{}`".format(title))
               elif "Unfortunately" in response.text:
                   await event.edit("`Woops, Incorrect link!`\n**Please check and try again.**")
               elif "correct" in response.text:
@@ -64,4 +64,3 @@ async def _(event):
           except YouBlockedUserError: 
               await event.reply("**Please unblock** @phsavebot **and try again**")
               return
-
