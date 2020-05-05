@@ -98,7 +98,7 @@ async def sticklet(event):
 
 
 
-    FONT_FILE = await get_font_file(event.client, "@FontRes", font_file_name)
+    FONT_FILE = await get_font_file(event.client, "@xtrafonts", font_file_name)
 
 
 
@@ -122,7 +122,7 @@ async def sticklet(event):
 
     image_stream = io.BytesIO()
 
-    image_stream.name = "@UniBorg.webp"
+    image_stream.name = "@xtra.webp"
 
     image.save(image_stream, "WebP")
 
