@@ -16,8 +16,8 @@ async def amireallyalive(alive):
     				 f"    🔸 Telethon : {version.__version__} \n   🔹 Python: {python_version()} \n"
     				 "`"
                      "`  🔸 Fork by:` @buddhhu \n "
-                     "`🔹 Bot creator:` [༺•|•𝙺𝚄𝙼𝙰𝚁•𝙰𝙼𝙸𝚃•|•༻](tg://user?id=667805879)\n"
+                     "`🔹 Bot creator:` [//•𝙺𝚞𝚖𝚊𝚛•𝙰𝚖𝚒𝚝•//](tg://user?id=667805879)\n"
                      "`  🔸 Database Status:` **All OK 👌!** \n"
                      f"`   🔹 My owner:` {DEFAULTUSER}  \n"
                      "`    🔸 Join` @xtratgbot `For Help` \n\n"
-                     "           [Deploy this userbot Now](https://github.com/amitsharma123234/X-tra-Telegram) \n\n    ")
+                     "           [Deploy this userbot Now](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n    ")
