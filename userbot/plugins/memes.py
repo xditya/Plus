@@ -882,7 +882,7 @@ async def vapor(vpr):
 @register(outgoing=True, pattern="^.repo$")
 async def source(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("Click [here](https://github.com/amitsharma123234/X-tra-Telegram) to open this lit af repo.")
+        await e.edit("Click [here](https://github.com/amitsharma123234/X-tra-TG-plus) to open this lit af repo.")
 			  
 			  
 @register(outgoing=True, pattern="^.str(?: |$)(.*)")
@@ -991,7 +991,7 @@ async def proo (pros):
         reply_text = PRO_STRINGS[index]
         await pros.edit(reply_text)
 
-@register(outgoing=True, pattern="^.fuk$")
+@register(outgoing=True, pattern="^.puk$")
 async def chutiya (fuks):
     """ String for fhu only -_-"""
     if not fuks.text[0].isalpha() and fuks.text[0] not in ("/", "#", "@", "!"):
