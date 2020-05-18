@@ -8,8 +8,6 @@ import time
 from datetime import datetime
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
-from base64 import b64decode
-import io
 import math
 import os
 from pySmartDL import SmartDL
@@ -43,8 +41,6 @@ async def _(event):
             downloaded_file_name,
             )
         ms_one = (end - start).seconds
-        if Config.NO_SONGS != True:
-            await borg.send_file(event.chat_id, allow_cache=False)
         if os.path.exists(downloaded_file_name):
             c_time = time.time()
             await borg.send_file(
@@ -64,4 +60,3 @@ async def _(event):
             await event.edit("File Not Found {}".format(input_str))
     else:
         await event.edit("Syntax // .rnupload file.name as reply to a Telegram media")
-
