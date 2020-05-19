@@ -110,6 +110,7 @@ if ENV:
         GENIUS = os.environ.get("GENIUS", None)
         HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
         HEROKU_APP_NAME = os.environ.get(" HEROKU_APP_NAME",None)
+        RAVANA_LEELA = os.environ.get("RAVANA_LEELA", None)
 else:
     class Config(object):
         DB_URI = None
