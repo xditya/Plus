@@ -88,7 +88,7 @@ def load_module(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        print("Successfully (re)imported "+shortname)
+        print("Pel diya isko ==>"+shortname)
     else:
         import userbot.utils
         import sys
@@ -112,7 +112,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins."+shortname] = mod
-        print("Successfully (re)imported "+shortname)
+        print("Pel diya isko ==>"+shortname)
 
 def remove_plugin(shortname):
     try:
