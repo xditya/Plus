@@ -28,10 +28,10 @@ async def install(event):
                 path1 = Path(downloaded_file_name)
                 shortname = path1.stem
                 load_module(shortname.replace(".py", ""))
-                await event.edit("Installed Plugin `{}`. Ja Gand Mara🤣...".format(os.path.basename(downloaded_file_name)))
+                await event.edit("`{}` pel diya. Ja Gand Mara🤣...".format(os.path.basename(downloaded_file_name)))
             else:
                 os.remove(downloaded_file_name)
-                await event.edit("Errors! Cannot install this plugin. Kya kr rha h bhsdk. Edit kr.")
+                await event.edit("Nhi pela ye plugin. Kya kr rha bhsdk. Edit kr.")
         except Exception as e:  # pylint:disable=C0103,W0703
             await event.edit(str(e))
             os.remove(downloaded_file_name)
