@@ -19,5 +19,5 @@ async def amireallyalive(alive):
                      "`🔹 Bot creator:` [//•𝙺𝚞𝚖𝚊𝚛•𝙰𝚖𝚒𝚝•//](tg://user?id=667805879)\n"
                      "`  🔸 Database Status:` **All OK 👌!** \n"
                      f"`   🔹 My owner:` {DEFAULTUSER}  \n"
-                     "`    🔸 Join` @xtratgbot `For Help` \n\n"
+                     "`    🔸 Join` @xtratgplus `For Help` \n\n"
                      "           [Deploy this userbot Now](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n    ")
