@@ -1,3 +1,4 @@
+# DO NOT OPEN THIS FOLDER
 PREFIX ?= /usr
 MANDIR ?= $(PREFIX)/share/man
 
