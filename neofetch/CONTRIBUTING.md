@@ -13,7 +13,7 @@
 <!-- vim-markdown-toc -->
 
 
-## Coding Conventions
+## Coding Conventions.
 
 - Use `bash` built-ins wherever possible.
 - Try not to pipe (`|`) at all.
