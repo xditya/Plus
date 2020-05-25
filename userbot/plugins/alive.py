@@ -34,4 +34,4 @@ async def amireallyalive(alive):
                      "`  🔸 Database Status:` **All OK 👌!** \n"
                      f"`   🔹 My owner:` {DEFAULTUSER}  \n"
                      "`    🔸 Join` @xtratgplus `For Help` \n\n"
-                     "           [Deploy this userbot Now](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n    ")
+                     "           [Deploy this userbot Now](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n    ", preview_link=False)
