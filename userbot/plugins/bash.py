@@ -46,7 +46,7 @@ async def _(event):
     await event.edit(OUTPUT)
 
 
-@command(pattern="^.sudobash ?(.*)", allow_sido=True)
+@command(pattern="^.sudobash ?(.*)", allow_sudo=True)
 async def _(event):
     if event.fwd_from:
         return
