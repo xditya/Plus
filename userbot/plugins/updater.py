@@ -56,7 +56,7 @@ NEW_UP_DATE_FOUND = (
     "`updating ...`"
 )
 REPO_REMOTE_NAME = "temponame"
-IFFUCI_ACTIVE_BRANCH_NAME = "master"
+IFFUCI_ACTIVE_BRANCH_NAME = "sudo"
 DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
 NO_HEROKU_APP_CFGD = "no heroku application found, but a key given? 😕 "
 HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
