@@ -54,3 +54,5 @@ wikipedia>=1.4.0
 youtube-dl
 pytuneteller
 lyricsgenius
+chatterbot
+chatterbot_corpus>=1.2.0
