@@ -56,3 +56,4 @@ pytuneteller
 lyricsgenius
 chatterbot
 chatterbot_corpus>=1.2.0
+redis
