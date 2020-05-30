@@ -11,7 +11,9 @@ if ENV:
         # Get your own ACCESS_KEY from http://api.screenshotlayer.com/api/capture
         SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY", None)
         # Send .get_id in any group to fill this value.
-        PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID", -100123456789))
+        PRIVATE_GROUP_BOT_API_ID = os.environ.get("BOTLOG_CHATID", None)
+        if PRIVATE_GROUP_BOT_API_ID:
+        	PRIVATE_GROUP_BOT_API_ID = int(PRIVATE_GROUP_BOT_API_ID)
         # Send .get_id in any channel to fill this value. ReQuired for @Manuel15 inspiration to work!
         PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID", -100123456789))
         # This is required for the plugins involving the file system.
@@ -110,6 +112,7 @@ if ENV:
         GENIUS = os.environ.get("GENIUS", None)
         HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
         HEROKU_APP_NAME = os.environ.get(" HEROKU_APP_NAME",None)
+        BOTLOG = os.environ.get("BOTLOG_CHATID", None)
 else:
     class Config(object):
         DB_URI = None
