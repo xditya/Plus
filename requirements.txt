@@ -10,7 +10,7 @@ selenium>=4.0.0a5
 aria2p 
 chatterbot
 chatterbot_corpus>=1.2.0
--r ./requirements-stdborg.txt
+-r ./requirements-startup.txt
 gitpython
 dnspython
 opencv-contrib-python
