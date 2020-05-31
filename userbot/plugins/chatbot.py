@@ -49,7 +49,7 @@ except Exception as e:
 
 #Some variables	  
 current_msgs = {}
-db = mongo_client['test']
+db = mongo_client['']
 auto_chat = db.auto_chat
 learn_chat = db.learn_chat
 
