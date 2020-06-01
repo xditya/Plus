@@ -8,6 +8,7 @@ import pymongo
 
 class Config(object):
     LOGGER = True
+    ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
     # Get this value from my.telegram.org! Please do not steal
     APP_ID = int(os.environ.get("APP_ID", None))
     API_HASH = os.environ.get("API_HASH", None)
