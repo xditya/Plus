@@ -52,3 +52,5 @@ urbandict
 wikipedia>=1.4.0
 youtube-dl
 redis
+chatterbot
+chatterbot_corpus>=1.2.0
