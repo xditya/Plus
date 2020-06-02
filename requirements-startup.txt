@@ -54,3 +54,4 @@ youtube-dl
 redis
 chatterbot
 chatterbot_corpus>=1.2.0
+dnspython
