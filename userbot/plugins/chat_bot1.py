@@ -28,7 +28,7 @@ from sample_config import Config
 from platform import python_version, uname
 import pymongo
 from pymongo import MongoClient
-mongo_client = MongoClient('mongodb+srv://Buddhhu:plm.oknijb@cluster0-kqgri.mongodb.net/test?retryWrites=true&w=majority', 27017)
+mongo_client = MongoClient(Var.MONGO_URI, 27017)
 
 # ================= CONSTANT =================
 DEFAULTUSER = Config.ALIVE_NAME if Config.ALIVE_NAME else uname().node
