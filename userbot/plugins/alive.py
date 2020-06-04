@@ -11,7 +11,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No name set yet."
 @command(outgoing=True, pattern="^.alive$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await alive.edit("   **Welcome To X-Tra-TG** \n\n"
+    await alive.edit("   **MADE IN INDIA🇮🇳 | MADE FOR WORLD🗺️** \n\n"
     				 "`"
     				 f"    🔸 Telethon : {version.__version__} \n   🔹 Python: {python_version()} \n"
     				 "`"
