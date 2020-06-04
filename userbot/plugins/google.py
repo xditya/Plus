@@ -9,7 +9,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
-from google_images_download import google_images_download
+from userbot.google_images_download import google_images_download
 from uniborg.util import admin_cmd
 
 
