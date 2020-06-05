@@ -11,7 +11,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No name set yet."
 @command(outgoing=True, pattern="^.alive$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await alive.edit("   **MADE IN INDIA🇮🇳 | MADE FOR WORLD🗺️** \n\n"
+    await alive.edit("   **Welcome To X-Tra-TG** \n\n"
     				 "`"
     				 f"    🔸 Telethon : {version.__version__} \n   🔹 Python: {python_version()} \n"
     				 "`"
@@ -21,3 +21,18 @@ async def amireallyalive(alive):
                      f"`   🔹 My owner:` {DEFAULTUSER}  \n"
                      "`    🔸 Join` @xtratgplus `For Help` \n\n"
                      "           [Deploy this userbot Now](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n    ")
+
+@command(outgoing=True, pattern="^.sudoalive$", allow_sudo=True)
+async def amireallyalive(alive):
+    """ For .alive command, check if the bot is running.  """
+    await alive.reply("   **Welcome To X-Tra-TG** \n\n"
+    				 "`"
+    				 f"    🔸 Telethon : {version.__version__} \n   🔹 Python: {python_version()} \n"
+    				 "`"
+                     "`  🔸 Fork by:` @buddhhu \n "
+                     "`🔹 Bot creator:` [//•𝙺𝚞𝚖𝚊𝚛•𝙰𝚖𝚒𝚝•//](tg://user?id=667805879)\n"
+                     "`  🔸 Database Status:` **All OK 👌!** \n"
+                     f"`   🔹 My owner:` {DEFAULTUSER}  \n"
+                     "`    🔸 Join` @xtratgplus `For Help` \n\n"
+                     "           [Deploy this userbot Now](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n",  link_preview=False
+                     )
