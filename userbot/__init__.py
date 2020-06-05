@@ -67,7 +67,7 @@ if bool(ENV):
     BOTLOG = sb(os.environ.get("BOTLOG", "True"))
 
     # Bleep Blop, this is a bot ;)
-    PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "True"))
+    PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
     # Console verbose logging
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -89,7 +89,7 @@ if bool(ENV):
     OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
 
     # Anti Spambot Config
-    ANTI_SPAMBOT = sb(os.environ.get("ANTI_SPAMBOT", "True"))
+    ANTI_SPAMBOT = sb(os.environ.get("ANTI_SPAMBOT", "False"))
 
     ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 
@@ -99,7 +99,7 @@ if bool(ENV):
     # Default .alive name
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
     
-    LESS_SPAMMY = os.environ.get("LESS_SPAMMY", True)
+    LESS_SPAMMY = os.environ.get("LESS_SPAMMY", "False")
 
     # Time & Date - Country and Time Zone
     COUNTRY = str(os.environ.get("COUNTRY", ""))
