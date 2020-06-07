@@ -115,6 +115,7 @@ class Config(object):
     API_TOKEN = os.environ.get("API_TOKEN",None)
     # MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     BOTLOG = os.environ.get("BOTLOG_CHATID", None)
+    PM_LOGGR_BOT_API_ID = int(os.environ.get("PM_LOGGR_BOT_API_ID", "-100"))
     # MONGOCLIENT = pymongo.MongoClient(MONGO_DB_URI)
     # MONGO = MONGOCLIENT.userbot
     
