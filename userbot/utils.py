@@ -145,10 +145,13 @@ def remove_plugin(shortname):
     except:
         raise ValueError
 
-def admin_cmd(**args):
+def admin_cmd(pattern=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
-    
-    pattern = args.get("pattern", None)
+
+    stack = inspect.stack()
+    previous_stack_frame = stack[1]
+    file_test = Path(previous_stack_frame.filename)
+    file_test = file_test.stem.replace(".py", "")
     allow_sudo = args.get("allow_sudo", False)
 
     # get the pattern from the decorator
@@ -157,12 +160,17 @@ def admin_cmd(**args):
             # special fix for snip.py
             args["pattern"] = re.compile(pattern)
         else:
-            args["pattern"] = re.compile(Config.COMMAND_HAND_LER + pattern)
+            args["pattern"] = re.compile("\." + pattern)
+            cmd = "." + pattern
+            try:
+                CMD_LIST[file_test].append(cmd)
+            except:
+                CMD_LIST.update({file_test: [cmd]})
 
     args["outgoing"] = True
     # should this command be available for other users?
     if allow_sudo:
-        args["from_users"] = list(Config.SUDO_USERS)
+        args["from_users"] = list(Var.SUDO_USERS)
         # Mutually exclusive with outgoing (can only set one of either).
         args["incoming"] = True
         del args["allow_sudo"]
@@ -172,12 +180,6 @@ def admin_cmd(**args):
         args["outgoing"] = True
 
     # add blacklist chats, UB should not respond in these chats
-    args["blacklist_chats"] = True
-    black_list_chats = list(Config.UB_BLACK_LIST_CHAT)
-    if len(black_list_chats) > 0:
-        args["chats"] = black_list_chats
-
-    # check if the plugin should allow edited updates
     allow_edited_updates = False
     if "allow_edited_updates" in args and args["allow_edited_updates"]:
         allow_edited_updates = args["allow_edited_updates"]
@@ -187,7 +189,6 @@ def admin_cmd(**args):
     is_message_enabled = True
 
     return events.NewMessage(**args)
-
 
 """ Userbot module for managing events.
  One of the main components of the userbot. """
