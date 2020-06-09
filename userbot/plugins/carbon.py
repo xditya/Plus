@@ -152,7 +152,7 @@ async def carbon_api(e):
 
          file,
 
-         caption="<< Here's your carbon, \n ** Color Scheme** `{}`>> ",
+         caption="<< **Here's your carbon **>> ",
 
          force_document=True,
 
@@ -160,7 +160,7 @@ async def carbon_api(e):
 
          )
 
-   os.remove('./xtra.png')
+   os.remove('./carbon.png')
 
    driver.quit()
 
