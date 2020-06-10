@@ -22,7 +22,7 @@ async def amireallyalive(alive):
                      "`    🔸 Join` @xtratgplus `For Help` \n\n"
                      "           [Deploy this userbot Now](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n    ")
 
-@command(outgoing=True, pattern="^.sudoalive$", allow_sudo=True)
+@command(outgoing=True, pattern="^.sudo$", allow_sudo=True)
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     await alive.reply("   **Welcome To X-Tra-TG** \n\n"
