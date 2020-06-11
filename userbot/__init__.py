@@ -83,6 +83,8 @@ if bool(ENV):
     # Bleep Blop, this is a bot ;)
     PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
     
+    PM_MESSAGE = os.environ.get(f"PM_MESSAGE", None)
+    
     UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
     "https://github.com/amitsharma123234/X-tra-TG-plus")
