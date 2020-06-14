@@ -152,7 +152,7 @@ def admin_cmd(pattern=None, **args):
     previous_stack_frame = stack[1]
     file_test = Path(previous_stack_frame.filename)
     file_test = file_test.stem.replace(".py", "")
-    allow_sudo = args.get("allow_sudo", False)
+    allow_sudo = args.get("allow_sudo", None)
 
     # get the pattern from the decorator
     if pattern is not None:
@@ -214,6 +214,7 @@ def register(**args):
     file_test = Path(previous_stack_frame.filename)
     file_test = file_test.stem.replace(".py", "")
     pattern = args.get('pattern', None)
+    allow_sudo = args.get("allow_sudo", None)
     disable_edited = args.get('disable_edited', True)
 
     if pattern is not None and not pattern.startswith('(?i)'):
