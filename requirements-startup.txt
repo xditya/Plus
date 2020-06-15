@@ -6,8 +6,6 @@ aria2p
 async_generator
 beautifulsoup4
 bs4
-bwb==3.0.0
-cfscrape
 coffeehouse
 cowpy
 cryptg
@@ -33,7 +31,6 @@ pySmartDL
 pybase64>=0.4.0
 pyfiglet
 pylast
-pymongo
 python-barcode
 python-dotenv
 python-magic
@@ -51,5 +48,4 @@ asyncurban
 urbandict
 wikipedia>=1.4.0
 youtube-dl
-dnspython
 pytuneteller
