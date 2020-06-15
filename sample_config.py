@@ -6,7 +6,7 @@ from telethon.tl.types import ChatBannedRights
 from pymongo import MongoClient
 from redis import StrictRedis
 
-class Config(object):
+class Var(object):
     LOGGER = True
     # Get this value from my.telegram.org! Please do not steal
     APP_ID = int(os.environ.get("APP_ID", 6))
