@@ -1,10 +1,11 @@
-"""AFK Plugin for @UniBorg
+"""AFK Plugin for @xtratgplus
 Syntax: .afk REASON"""
 import asyncio
 import datetime
 from datetime import datetime
 from telethon import events
 from telethon.tl import functions, types
+from userbot import CUSTOM_AFK
 
 
 global USER_AFK  # pylint:disable=E0602
@@ -16,6 +17,10 @@ USER_AFK = {}
 afk_time = None
 last_afk_message = {}
 afk_start = {}
+
+AFK_MSG = str(CUSTOM_AFK) if CUSTOM_AFK else "**Sorry**!! I'm AFK now."
+AFK_REASON = 
+AFKSTR = f"{AFK_MSG}"
 
 
 @borg.on(events.NewMessage(pattern=r"\.afk ?(.*)", outgoing=True))  # pylint:disable=E0602
@@ -145,10 +150,10 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"__My Master Has Been Gone For__ `{total_afk_time}`\nWhere He Is: ~~ONLY GOD KNOWS~~ " + \
-            f"\n\n__I promise I'll back in a few light years__\n**REASON**: {reason}" \
+        message_to_reply = f"**My Master Is Offline!!** \n **Since:-** `{total_afk_time}`" + \
+            f"\n\n**MASTER:-** ` Following is the reason for AFK`\n**REASON**: `{reason}`" \
             if reason \
-            else f"**Heya!**\n__I am currently unavailable. Since when, you ask? For {total_afk_time} I guess.__\n\nWhen will I be back? ~~Soon~~ __Whenever I feel like it__**( ಠ ʖ̯ ಠ)**  "
+            else f"**{AFKSTR}**.\n\n **AFK Since** {total_afk_time} "
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
