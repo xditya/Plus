@@ -122,6 +122,10 @@ if bool(ENV):
     # Default .alive name
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
     
+    # Default AFK message
+    CUSTOM_AFK = os.environ.get("CUSTOM_AFK", None)
+
+    
     LESS_SPAMMY = os.environ.get("LESS_SPAMMY", True)
 
     # Time & Date - Country and Time Zone
