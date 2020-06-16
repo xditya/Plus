@@ -19,9 +19,7 @@ last_afk_message = {}
 afk_start = {}
 
 AFK_MSG = str(CUSTOM_AFK) if CUSTOM_AFK else "**Sorry**!! I'm AFK now."
-AFK_REASON = 
 AFKSTR = f"{AFK_MSG}"
-
 
 @borg.on(events.NewMessage(pattern=r"\.afk ?(.*)", outgoing=True))  # pylint:disable=E0602
 async def _(event):
@@ -87,8 +85,7 @@ async def set_not_afk(event):
             await borg.send_message(  # pylint:disable=E0602
                 event.chat_id,
                 "Please set `PRIVATE_GROUP_BOT_API_ID` " + \
-                "for the proper functioning of afk functionality " + \
-                "in @xtratgbot\nCheck pinned message for more info.\n\n `{}`".format(str(e)),
+                "for the proper functioning of afk functionality ",
                 reply_to=event.message.id,
                 silent=True
             )
@@ -150,10 +147,10 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"**My Master Is Offline!!** \n **Since:-** `{total_afk_time}`" + \
+        message_to_reply = f"**My Master Is Offline!!** \n**Since:-** `{total_afk_time}`" + \
             f"\n\n**MASTER:-** ` Following is the reason for AFK`\n**REASON**: `{reason}`" \
             if reason \
-            else f"**{AFKSTR}**.\n\n **AFK Since** {total_afk_time} "
+            else f"**{AFKSTR}**.\n\n**AFK Since** {total_afk_time} "
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
