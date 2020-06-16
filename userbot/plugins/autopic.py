@@ -15,12 +15,12 @@ async def autopic(event):
     downloader.start(blocking=False)
     photo = "userbot/photo_pfp.png"
     while not downloader.isFinished():
-        place_holder = None
+        pass
     counter = -30
     while True:
         shutil.copy(downloaded_file_name, photo)
         im = Image.open(photo)
-        file_test = im.rotate(counter, expand=False).save(photo, "PNG")
+        im.rotate(counter, expand=False).save(photo, "PNG")
         current_time = datetime.now().strftime("⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ \n  Time: %H:%M \n  Date: %d.%m.%y \n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
         img = Image.open(photo)
         drawn_text = ImageDraw.Draw(img)

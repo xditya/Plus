@@ -68,12 +68,7 @@ async def _(event):
             change_info=changeinfo,
         )
         try:
-            result = await borg(  # pylint:disable=E0602
-                functions.messages.EditChatDefaultBannedRightsRequest(
-                    peer=peer_id,
-                    banned_rights=banned_rights
-                )
-            )
+            pass
         except Exception as e:  # pylint:disable=C0103,W0703
             await event.edit(str(e))
         else:
@@ -227,6 +222,4 @@ async def _(event):
                         update_lock(event.chat_id, "bots", False)
                         break
             if Config.G_BAN_LOGGER_GROUP is not None and is_ban_able:
-                ban_reason_msg = await event.reply(
-                    "!warn [user](tg://user?id={}) Please Do Not Add BOTs to this chat.".format(users_added_by)
-                )
+                pass

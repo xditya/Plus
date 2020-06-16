@@ -42,7 +42,7 @@ async def _(event):
         user_bio = html.escape(replied_user.about)
     common_chats = replied_user.common_chats_count
     try:
-        dc_id, location = get_input_location(replied_user.profile_photo)
+        dc_id, _ = get_input_location(replied_user.profile_photo)
     except Exception as e:
         dc_id = "Need a Profile Picture to check **this**"
         location = str(e)

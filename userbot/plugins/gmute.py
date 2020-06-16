@@ -19,8 +19,6 @@ async def startgmute(event):
         userid = event.chat_id
     else:
         return await event.edit("Please reply to a user or add their into the command to gmute them.")
-    chat_id = event.chat_id
-    chat = await event.get_chat()
     if is_muted(userid, "gmute"):
         return await event.edit("This user is already gmuted")
     try:
@@ -48,7 +46,6 @@ async def endgmute(event):
         userid = event.chat_id
     else:
         return await event.edit("Please reply to a user or add their into the command to ungmute them.")
-    chat_id = event.chat_id
     if not is_muted(userid, "gmute"):
         return await event.edit("This user is not gmuted")
     try:
@@ -76,8 +73,6 @@ async def startgmute(event):
         userid = event.chat_id
     else:
         return await event.edit("Please reply to a user or add their into the command to gmute them.")
-    chat_id = event.chat_id
-    chat = await event.get_chat()
     if is_muted(userid, "gmute"):
         return await event.edit("This user is already gmuted")
     try:
@@ -105,7 +100,6 @@ async def endgmute(event):
         userid = event.chat_id
     else:
         return await event.edit("Please reply to a user or add their into the command to ungmute them.")
-    chat_id = event.chat_id
     if not is_muted(userid, "gmute"):
         return await event.edit("This user is not gmuted")
     try:

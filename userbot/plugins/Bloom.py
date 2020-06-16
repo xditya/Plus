@@ -36,7 +36,7 @@ async def autopic(event):
     downloader.start(blocking=False)
     photo = "photo_pfp.png"
     while not downloader.isFinished():
-        place_holder = None
+        pass
 
     while True:
         #RIP Danger zone Here no editing here plox

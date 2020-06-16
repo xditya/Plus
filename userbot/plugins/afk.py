@@ -81,7 +81,7 @@ async def set_not_afk(event):
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
                 "Set AFK mode to False"
             )
-        except Exception as e:  # pylint:disable=C0103,W0703
+        except Exception:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
                 event.chat_id,
                 "Please set `PRIVATE_GROUP_BOT_API_ID` " + \
@@ -111,7 +111,6 @@ async def on_afk(event):
     afk_end = back_alivee.replace(microsecond=0)
     if afk_start != {}:
         total_afk_time = str((afk_end - afk_start))
-    afk_since = "**a while ago**"
     current_message_text = event.message.message.lower()
     if "afk" in current_message_text:
         # userbot's should not reply to other userbot's
