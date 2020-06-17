@@ -1,11 +1,12 @@
 """AFK Plugin for @xtratgplus
+© @buddhhu
 Syntax: .afk REASON"""
 import asyncio
 import datetime
 from datetime import datetime
 from telethon import events
 from telethon.tl import functions, types
-from userbot import CUSTOM_AFK
+from userbot import CUSTOM_AFK, MASTERS_MSG
 
 
 global USER_AFK  # pylint:disable=E0602
@@ -18,7 +19,9 @@ afk_time = None
 last_afk_message = {}
 afk_start = {}
 
-AFK_MSG = str(CUSTOM_AFK) if CUSTOM_AFK else "**Sorry**!! I'm AFK now."
+AFK_MSG = str(CUSTOM_AFK) if CUSTOM_AFK else "**Sorry!!** I'm AFK now."
+MAS_MSG = str(MASTERS_MSG) if MASTERS_MSG else "**I'll be back right now.**"
+MASSTR = f"{MAS_MSG}"
 AFKSTR = f"{AFK_MSG}"
 
 @borg.on(events.NewMessage(pattern=r"\.afk ?(.*)", outgoing=True))  # pylint:disable=E0602
@@ -148,7 +151,7 @@ async def on_afk(event):
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
         message_to_reply = f"**My Master Is Offline!!** \n**Since:-** `{total_afk_time}`" + \
-            f"\n\n**MASTER:-** ` Following is the reason for AFK`\n**REASON**: `{reason}`" \
+            f"\n\n**MASTER:-** `{MASSTR}`\n**REASON**: `{reason}`" \
             if reason \
             else f"**{AFKSTR}**.\n\n**AFK Since** {total_afk_time} "
         msg = await event.reply(message_to_reply)
