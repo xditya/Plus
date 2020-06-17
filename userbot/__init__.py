@@ -124,8 +124,8 @@ if bool(ENV):
     
     # Default AFK message
     CUSTOM_AFK = os.environ.get("CUSTOM_AFK", None)
+    MASTERS_MSG = os.environ.get("MASTERS_MSG", None)
 
-    
     LESS_SPAMMY = os.environ.get("LESS_SPAMMY", True)
 
     # Time & Date - Country and Time Zone
