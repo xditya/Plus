@@ -20,7 +20,7 @@ last_afk_message = {}
 afk_start = {}
 
 AFK_MSG = str(CUSTOM_AFK) if CUSTOM_AFK else "**Sorry!!** I'm AFK now."
-MAS_MSG = str(MASTERS_MSG) if MASTERS_MSG else "**I'll be back right now.**"
+MAS_MSG = str(MASTERS_MSG) if MASTERS_MSG else "I'll be back right now."
 MASSTR = f"{MAS_MSG}"
 AFKSTR = f"{AFK_MSG}"
 
