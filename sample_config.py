@@ -3,8 +3,8 @@
 # Create a new config.py file in same dir and import, then extend this class.
 import os
 from telethon.tl.types import ChatBannedRights
-from pymongo import MongoClient
-from redis import StrictRedis
+# from pymongo import MongoClient
+# from redis import StrictRedis
 
 class Config(object):
     LOGGER = True
