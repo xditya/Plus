@@ -94,6 +94,10 @@ if bool(ENV):
 
     # SQL Database URI
     DB_URI = os.environ.get("DATABASE_URL", None)
+    
+    # 
+    FBAN_USER = os.environ.get("FBAN_USER", None)
+    FBAN_REASON = os.environ.get("FBAN_REASON", None)
 
     # OCR API key
     OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
