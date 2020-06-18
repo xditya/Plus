@@ -1,5 +1,5 @@
-sudo
-git
+wget
+wget2
 jq
 pv
 
