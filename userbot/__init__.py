@@ -16,7 +16,7 @@ import os
 import sys
 from telethon.sessions import StringSession
 from telethon import TelegramClient
-from .userbot import *
+from userbot import *
 from var import Var
 
 os.system("pip install --upgrade pip")
