@@ -1,21 +1,24 @@
 """ It does not do to dwell on dreams and forget to live
-Syntax: .getime"""
+Modded by @buddhhu
+Syntax: .time"""
 
 import asyncio
 import os
 from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 from userbot.utils import admin_cmd
+from userbot import TZ
 
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
-
+TZONE = str(TZ) if TZ else "India"
+TIME = f"⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ \n⚡USERBOT TIMEZONE⚡ \n LOCATION: {TZONE} \n  Time: %H:%M:%S \n  Date: %d.%m.%y \n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡"
 
 @borg.on(admin_cmd("time ?(.*)"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
-    current_time = datetime.now().strftime("⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ \n⚡USERBOT TIMEZONE⚡ \n LOCATION: India \n  Time: %H:%M:%S \n  Date: %d.%m.%y \n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+    current_time = datetime.now().strftime(TIME)
     start = datetime.now()
     input_str = event.pattern_match.group(1)
     reply_msg_id = event.message.id
@@ -36,7 +39,7 @@ async def _(event):
     await borg.send_file(  # pylint:disable=E0602
         event.chat_id,
         required_file_name,
-        caption="Userbot: Powered by @XtraTgBot",
+        caption="Userbot: Powered by @xtratgplus",
         # Courtesy: @ManueI15
         reply_to=reply_msg_id
     )
@@ -46,11 +49,3 @@ async def _(event):
     await event.edit("Created sticker in {} seconds".format(time_taken_ms))
     await asyncio.sleep(5)
     await event.delete()
-
-
-@borg.on(admin_cmd("gtime (.*)"))  # pylint:disable=E0602
-async def _(event):
-    if event.fwd_from:
-        return
-    input_str = event.pattern_match.group(1)
-    logger.info(input_str)  # pylint:disable=E0602
