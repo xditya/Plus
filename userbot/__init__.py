@@ -135,7 +135,7 @@ if bool(ENV):
     LESS_SPAMMY = os.environ.get("LESS_SPAMMY", True)
 
     # Time & Date - Country and Time Zone
-    COUNTRY = str(os.environ.get("COUNTRY", ""))
+    TZ = str(os.environ.get("TZ", ""))
 
     TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
 
