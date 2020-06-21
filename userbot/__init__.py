@@ -15,6 +15,8 @@
 import os
 import sys
 from telethon.sessions import StringSession
+from pymongo import MongoClient
+from redis import StrictRedis
 from telethon import TelegramClient
 from userbot import *
 from var import Var
