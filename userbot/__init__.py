@@ -172,6 +172,11 @@ else:
     # Put your ppe vars here if you are using local hosting
     PLACEHOLDER = None
 
+    # Mongo
+    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
+    MONGOCLIENT = pymongo.MongoClient(MONGO_DB_URI)
+    MONGO = MONGOCLIENT.userbot
+
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
 if not os.path.exists('bin'):
