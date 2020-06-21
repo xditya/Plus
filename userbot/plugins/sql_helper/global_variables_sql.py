@@ -12,3 +12,4 @@ LASTMSG = {}
 CMD_HELP = {}
 ISAFK = False
 AFKREASON = None
+BUILD = "Plus+"
