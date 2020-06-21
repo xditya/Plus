@@ -15,9 +15,6 @@
 import os
 import sys
 from telethon.sessions import StringSession
-from pymongo import MongoClient
-import pymongo
-from redis import StrictRedis
 from telethon import TelegramClient
 from userbot import *
 from var import Var
@@ -173,11 +170,6 @@ else:
     # Put your ppe vars here if you are using local hosting
     PLACEHOLDER = None
 
-    # Mongo
-    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
-    MONGOCLIENT = pymongo.MongoClient(MONGO_DB_URI)
-    MONGO = MONGOCLIENT.userbot
-
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
 if not os.path.exists('bin'):
@@ -195,37 +187,4 @@ for binary, path in binaries.items():
     downloader.start()
     os.chmod(path, 0o755)
 
-    # Init Mongo
-MONGOCLIENT = MongoClient(MONGO_DB_URI, 27017, serverSelectionTimeoutMS=1)
-MONGO = MONGOCLIENT.userbot
-
-
-def is_mongo_alive():
-    try:
-        MONGOCLIENT.server_info()
-    except BaseException:
-        return False
-    return True
-
-
-# Init Redis
-# Redis will be hosted inside the docker container that hosts the bot
-# We need redis for just caching, so we just leave it to non-persistent
-REDIS = StrictRedis(host='localhost', port=6379, db=0)
-
-
-def is_redis_alive():
-    try:
-        REDIS.ping()
-        return True
-    except BaseException:
-        return False
-# Global Variables
-COUNT_MSG = 0
-USERS = {}
-COUNT_PM = {}
-LASTMSG = {}
-CMD_HELP = {}
-ISAFK = False
-AFKREASON = None
-# End of PaperPlaneExtended Support Vars
+# END OF VARS
