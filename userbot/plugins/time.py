@@ -7,11 +7,11 @@ import os
 from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 from userbot.utils import admin_cmd
-from userbot import TZ
+from userbot import COUNTRY
 
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
-TZONE = str(TZ) if TZ else "India"
+TZONE = str(COUNTRY) if COUNTRY else "India"
 TIME = f"⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ \n⚡USERBOT TIMEZONE⚡ \n LOCATION: {TZONE} \n  Time: %H:%M:%S \n  Date: %d.%m.%y \n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡"
 
 @borg.on(admin_cmd("time ?(.*)"))  # pylint:disable=E0602
