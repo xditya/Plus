@@ -11,28 +11,28 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No name set yet."
 @command(outgoing=True, pattern="^.alive$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await alive.edit("   **Welcome To X-Tra-TG** \n\n"
+    await alive.edit("   **MADE IN 🇮🇳 , MADE FOR 🗺️** \n\n"
     				 "`"
     				 f"    🔸 Telethon : {version.__version__} \n   🔹 Python: {python_version()} \n"
     				 "`"
-                     "`  🔸 Fork by:` @buddhhu \n "
+                     f"`  🔸 Fork by:` {DEFAULTUSER} \n "
                      "`🔹 Bot creator:` [//•𝙺𝚞𝚖𝚊𝚛•𝙰𝚖𝚒𝚝•//](tg://user?id=667805879)\n"
                      "`  🔸 Database Status:` **All OK 👌!** \n"
                      f"`   🔹 My owner:` {DEFAULTUSER}  \n"
                      "`    🔸 Join` @xtratgplus `For Help` \n\n"
-                     "           [Deploy this userbot Now](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n    ")
+                     "                      [Deploy✔️](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n    ")
 
 @command(outgoing=True, pattern="^.sudo$", allow_sudo=True)
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await alive.reply("   **Welcome To X-Tra-TG** \n\n"
+    await alive.reply("   **MADE IN 🇮🇳 , MADE FOR 🗺️** \n\n"
     				 "`"
     				 f"    🔸 Telethon : {version.__version__} \n   🔹 Python: {python_version()} \n"
     				 "`"
-                     "`  🔸 Fork by:` @buddhhu \n "
+                     f"`  🔸 Fork by:` {DEFAULTUSER} \n "
                      "`🔹 Bot creator:` [//•𝙺𝚞𝚖𝚊𝚛•𝙰𝚖𝚒𝚝•//](tg://user?id=667805879)\n"
                      "`  🔸 Database Status:` **All OK 👌!** \n"
                      f"`   🔹 My owner:` {DEFAULTUSER}  \n"
                      "`    🔸 Join` @xtratgplus `For Help` \n\n"
-                     "           [Deploy this userbot Now](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n",  link_preview=False
+                     "                      [Deploy✔️](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n",  link_preview=False
                      )
