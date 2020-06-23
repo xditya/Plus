@@ -17,6 +17,6 @@ async def _(event):
     strings = strings[:-1]
     string = " ".join(strings)
     output = f"[{string}]({link})"
-    await event.edit(output)
+    await event.edit(output, link_preview = False)
 
 
