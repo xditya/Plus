@@ -15,7 +15,7 @@ from datetime import datetime
 DELETE_TIMEOUT = 5
 
 @command(pattern="^.import", outgoing=True)
-async def import(event):
+async def install(event):
     if event.fwd_from:
         return
     if event.reply_to_msg_id:
