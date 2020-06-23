@@ -14,8 +14,8 @@ from datetime import datetime
 
 DELETE_TIMEOUT = 5
 
-@command(pattern="^.install", outgoing=True)
-async def install(event):
+@command(pattern="^.import", outgoing=True)
+async def import(event):
     if event.fwd_from:
         return
     if event.reply_to_msg_id:
@@ -28,10 +28,10 @@ async def install(event):
                 path1 = Path(downloaded_file_name)
                 shortname = path1.stem
                 load_module(shortname.replace(".py", ""))
-                await event.edit("`{}` pel diya. Ja Gand Mara🤣...".format(os.path.basename(downloaded_file_name)))
+                await event.edit("**Successfully imported** `{}`.".format(os.path.basename(downloaded_file_name)))
             else:
                 os.remove(downloaded_file_name)
-                await event.edit("Nhi pela ye plugin. Edit kr.")
+                await event.edit("**Plugin already imported.**")
         except Exception as e:  # pylint:disable=C0103,W0703
             await event.edit(str(e))
             os.remove(downloaded_file_name)
