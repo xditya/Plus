@@ -5,8 +5,10 @@ from pySmartDL import SmartDL
 from telethon.tl import functions
 import asyncio
 import shutil
+from userbot import AUTOPIC_COMMENT
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+AUTOPIC_STR = str(AUTOPIC_COMMENT) if AUTOPIC_COMMENT else "Life Is too Short.\n And so is TG account."
 
 @command(pattern="^.autopic", outgoing=True)
 async def autopic(event):
@@ -16,12 +18,12 @@ async def autopic(event):
     photo = "userbot/photo_pfp.png"
     while not downloader.isFinished():
         place_holder = None
-    counter = -30
+    counter = -0
     while True:
         shutil.copy(downloaded_file_name, photo)
         im = Image.open(photo)
         file_test = im.rotate(counter, expand=False).save(photo, "PNG")
-        current_time = datetime.now().strftime("⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ \n  Time: %H:%M \n  Date: %d.%m.%y \n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
+        current_time = datetime.now().strftime(f"⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ \n  Time: %H:%M \n  Date: %d.%m.%y \n  {AUTOPIC_STR} \n ⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡")
         img = Image.open(photo)
         drawn_text = ImageDraw.Draw(img)
         fnt = ImageFont.truetype(FONT_FILE_TO_USE, 30)
@@ -33,7 +35,7 @@ async def autopic(event):
                 file
             ))
             os.remove(photo)
-            counter -= 30
+            counter -= 0
             await asyncio.sleep(60)
         except:
             return
