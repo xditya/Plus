@@ -42,39 +42,15 @@ def command(**args):
             args["outgoing"] = False
 
         try:
-            if pattern is not None and not pattern.startswith('(?i)'):
-                args['pattern'] = '(?i)' + pattern
-        except:
-            pass
-
-        reg = re.compile('(.*)')
-        if not pattern == None:
-            try:
-                cmd = re.search(reg, pattern)
-                try:
-                    cmd = cmd.group(1).replace("$", "").replace("\\", "").replace("^", "")
-                except:
-                    pass
-
-                try:
-                    CMD_LIST[file_test].append(cmd)
-                except:
-                    CMD_LIST.update({file_test: [cmd]})
-            except:
-                pass
-
-        if allow_sudo:
-            args["from_users"] = list(Var.SUDO_USERS)
-            # Mutually exclusive with outgoing (can only set one of either).
-            args["incoming"] = True
-        del allow_sudo
-        try:
-            del args["allow_sudo"]
-        except:
-            pass
-
-        if "allow_edited_updates" in args:
-            del args['allow_edited_updates']
+            if pattern is not None:
+        args["pattern"] = re.compile(Config.COMMAND_HAND_LER + pattern)
+    if allow_sudo:
+        args["from_users"] = list(Config.SUDO_USERS)
+    else:
+        args["outgoing"] = True
+    args["blacklist_chats"] = True
+    args["chats"] = list(Config.UB_BLACK_LIST_CHAT)
+    return events.NewMessage(**args)
 
         def decorator(func):
             if allow_edited_updates:
