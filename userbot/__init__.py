@@ -142,6 +142,8 @@ if bool(ENV):
     # Clean Welcome
     CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
 
+    # Autopic
+    AUTOPIC_COMMENT = os.environ.get("AUTOPIC_COMMENT", "")
     # Last.fm Module
     BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
     DEFAULT_BIO = os.environ.get("DEFAULT_BIO", None)
