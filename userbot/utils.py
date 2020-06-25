@@ -145,7 +145,7 @@ def remove_plugin(shortname):
     except:
         raise ValueError
 
-def admin_cmd(pattern=None, allow_sudo=False, **args):
+def admin_cmd(pattern=None, allow_sudo=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
 
     if pattern is not None:
