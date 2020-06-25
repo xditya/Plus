@@ -14,7 +14,7 @@ FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 TZONE = str(COUNTRY) if COUNTRY else "India"
 TIME = f"⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ \n⚡USERBOT TIMEZONE⚡ \n LOCATION: {TZONE} \n  Time: %H:%M:%S \n  Date: %d.%m.%y \n⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡"
 
-@borg.on(admin_cmd("time ?(.*)"))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="time ?(.*)"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
