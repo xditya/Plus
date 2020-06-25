@@ -211,7 +211,7 @@ async def demote(dmod):
             f"CHAT: {dmod.chat.title}(`{dmod.chat_id}`)")
 
 
-@borg.on(admin_cmd(pattern="(ban|unban) ?(.*)"), allow_sudo=True)
+@borg.on(admin_cmd(pattern="(ban|unban) ?(.*)"))
 async def _(event):
     # Space weirdness in regex required because argument is optional and other
     # commands start with ".unban"
@@ -242,7 +242,7 @@ async def _(event):
         await event.edit(f"{input_cmd}ned Successfully!")
 
 
-@borg.on(admin_cmd(pattern="pgs ?(.*)"), allow_sudo=True)
+@borg.on(admin_cmd(pattern="pgs ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -335,7 +335,7 @@ async def muter(moot):
             await moot.delete()
 
 
-@borg.on(admin_cmd(pattern="affk(?: |$)(.*)"), allow_sudo=True)
+@borg.on(admin_cmd(pattern="affk(?: |$)(.*)"))
 @errors_handler
 async def promote(promt):
     """ For .promote command, promotes the replied/tagged person """
