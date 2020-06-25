@@ -20,7 +20,7 @@ import time
 
 
 
-@borg.on(admin_cmd("bye", outgoing=True))
+@borg.on(admin_cmd(pattern="bye"))
 
 async def leave(e):
 
