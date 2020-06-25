@@ -149,7 +149,7 @@ def admin_cmd(**args):
     args["func"] = lambda e: e.via_bot_id is None
     
     pattern = args.get("pattern", None)
-    allow_sudo = args.get("allow_sudo", False)
+    allow_sudo = args.get("allow_sudo", None)
 
     if pattern is not None:
         args["pattern"] = re.compile(Config.COMMAND_HAND_LER + pattern)
