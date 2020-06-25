@@ -9,7 +9,7 @@ from telethon import events
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd("screenlong (.*)"))
+@borg.on(admin_cmd(pattern="screenlong (.*)"))
 async def _(event):
     if event.fwd_from:
         return
