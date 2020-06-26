@@ -12,6 +12,7 @@ AUTOPIC_STR = str(AUTOPIC_COMMENT) if AUTOPIC_COMMENT else "Life Is too Short.\n
 
 @command(pattern="^.autopic", outgoing=True)
 async def autopic(event):
+    await event.edit("**Autopic** has been Enabled!!")
     downloaded_file_name = "userbot/original_pic.png"
     downloader = SmartDL(Var.DOWNLOAD_PFP_URL_CLOCK, downloaded_file_name, progress_bar=False)
     downloader.start(blocking=False)
