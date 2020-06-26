@@ -51,5 +51,3 @@ youtube-dl
 pytuneteller
 pymongo
 psutil
-chatterbot
-chatterbot_corpus
