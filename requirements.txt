@@ -1,2 +1,4 @@
+chatterbot
+chatterbot_corpus
 Telethon>=1.10.3
 -r ./requirements-startup.txt
