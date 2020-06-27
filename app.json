@@ -1,6 +1,6 @@
 {
   "name": "X-tra-TG-plus",
-  "description": "Userbot created by a SNAPDRAGON and custom fork by ANUBIS\n\n join https://t.me/XtraTgChat for any problems or support",
+  "description": "Userbot created by a SNAPDRAGON and ANUBIS & this fork by BUDDHHU\n\n join https://t.me/xtratgpluschat for any problems or support",
   "logo": "https://telegra.ph/file/fdb33d0f5a9a7d5c07b74.png",
   "keywords": [
     "telegram",
@@ -95,6 +95,28 @@
     "TZ": {
       "description": "Required for Correct Time on autopic/get time. Know your timezone from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
       "value": "Asia/Kolkata",
+    },
+    "COUNTRY": {
+      "description": "Required for Correct Time on autopic/get time. Know your timezone from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
+      "value": "India",
+    },
+    "AUTONAME_NAME": {
+      "description": "Required for Name on autoname plugin",
+      "value": "",
+    },
+    "AUTOPIC_COMMENT": {
+      "description": "Comment shown with time and datebin autopic",
+      "value": "",
+      "required": false
+    },
+    "CUSTOM_AFK": {
+      "description": "This will be shown when you go afk without reason",
+      "value": "",
+      "required": false
+    },
+    "MASTERS_MSG": {
+      "description": "This will be shown when you go afk with reason",
+      "value": "",
       "required": false
     }
   },
@@ -105,16 +127,20 @@
     }
   }],
   "buildpacks": [{
+    "url": "heroku/python"
+  },{
+    "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+  },{
     "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
   },{
-    "url":"https://github.com/amivin/aria2-heroku.git"
+    "url": "https://github.com/amivin/aria2-heroku.git"
   },{
-    "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
+    "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
   },{
-    "url":"https://github.com/heroku/heroku-buildpack-chromedriver"
+    "url": "https://github.com/heroku/heroku-buildpack-chromedriver"
   },{
     "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
   },{
-    "url": "heroku/python"
+    "url": "https://github.com/stevo550/buildpack-slug-cleaner"
   }]
 }
