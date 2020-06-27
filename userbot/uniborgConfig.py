@@ -98,7 +98,11 @@ class Config(object):
     LYDIA_API = os.environ.get("LYDIA_API_KEY", None)
     DEFAULT_NAME = os.environ.get("DEFAULT_NAME",None)
     VIRUSTOTAL_API_KEY = os.environ.get("VIRUSTOTAL_API_KEY", None)
-    #
+    AUTONAME_NAME = os.environ.get("AUTONAME_NAME", None)
+    CUSTOM_AFK = os.environ.get("CUSTOM_AFK", None)
+    MASTERS_MSG = os.environ.get("MASTERS_MSG", None)
+    COUNTRY= str(os.environ.get("COUNTRY", ""))
+    AUTOPIC_COMMENT = os.environ.get("AUTOPIC_COMMENT", "")
     # define "spam" in PMs
     MAX_FLOOD_IN_P_M_s = os.environ.get("MAX_FLOOD_IN_P_M_s", None)
     # leave this blank, should be automatically filled for Heroku.com users
