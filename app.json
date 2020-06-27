@@ -1,6 +1,6 @@
 {
   "name": "X-tra-TG-plus",
-  "description": "Userbot created by a SNAPDRAGON and ANUBIS and this fork by BUDDHHU\n\n join https://t.me/xtratgpluschat for any problems or support",
+  "description": "Userbot created by a SNAPDRAGON and ANUBIS & this fork by BUDDHHU\n\n join https://t.me/xtratgpluschat for any problems or support",
   "logo": "https://telegra.ph/file/fdb33d0f5a9a7d5c07b74.png",
   "keywords": [
     "telegram",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/amitsharma123234/X-tra-TG-plus/",
+  "repository": "https://github.com/Dark-Princ3/X-tra-Telegram/",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
@@ -64,14 +64,10 @@
       "value": "",
       "required": false
     },
-    "SUDO_USERS": {
-      "description": "Makes your acc and bot stable",
-      "value": "",
-      "required": false
-    },
     "TG_BOT_TOKEN_BF_HER": {
       "description": "Needed for inline buttons maker. Make a bot at http://telegram.dog/BotFather and get the token of your bot.Worth it. Get it.",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "CHROME_BIN": {
       "description": "For Carbon.py. Leave as it is. ",
@@ -85,7 +81,8 @@
     },
     "TG_BOT_USER_NAME_BF_HER": {
       "description": "Needed for inline buttons maker. Make a bot at http://telegram.dog/BotFather and get the username of your bot",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "DOWNLOAD_PFP_URL_CLOCK": {
       "description": "Needed for autopic module. A url that is a preview link of your Profile Pic",
@@ -95,28 +92,6 @@
     "TZ": {
       "description": "Required for Correct Time on autopic/get time. Know your timezone from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
       "value": "Asia/Kolkata",
-    },
-    "COUNTRY": {
-      "description": "Required for Correct Time on autopic/get time. Know your timezone from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
-      "value": "India",
-    },
-    "AUTONAME_NAME": {
-      "description": "Required for Name on autoname plugin",
-      "value": "",
-    },
-    "AUTOPIC_COMMENT": {
-      "description": "Comment shown with time and datebin autopic",
-      "value": "",
-      "required": false
-    },
-    "CUSTOM_AFK": {
-      "description": "This will be shown when you go afk without reason",
-      "value": "",
-      "required": false
-    },
-    "MASTERS_MSG": {
-      "description": "This will be shown when you go afk with reason",
-      "value": "",
       "required": false
     }
   },
