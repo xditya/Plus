@@ -8,7 +8,7 @@ from userbot.utils import admin_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No name set yet."
 
-@command(outgoing=True, pattern="^.alive$")
+@borg.on(admin_cmd(pattern="alive"))
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     await alive.edit("   **MADE IN 🇮🇳 , MADE FOR 🗺️** \n\n"
@@ -20,9 +20,9 @@ async def amireallyalive(alive):
                      "`  🔸 Database Status:` **All OK 👌!** \n"
                      f"`   🔹 My owner:` {DEFAULTUSER}  \n"
                      "`    🔸 Join` @xtratgplus `For Help` \n\n"
-                     "                      [Deploy✔️](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n    ")
+                     "                      [Deploy✔️](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Famitsharma123234%2FX-tra-TG-plus&template=https%3A%2F%2Fgithub.com%2Famitsharma123234%2FX-tra-TG-plus)  \n\n    ")
 
-@command(outgoing=True, pattern="^.sudo$", allow_sudo=True)
+@borg.on(admin_cmd(pattern="sudo", allow_sudo=True))
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     await alive.reply("   **MADE IN 🇮🇳 , MADE FOR 🗺️** \n\n"
@@ -34,5 +34,5 @@ async def amireallyalive(alive):
                      "`  🔸 Database Status:` **All OK 👌!** \n"
                      f"`   🔹 My owner:` {DEFAULTUSER}  \n"
                      "`    🔸 Join` @xtratgplus `For Help` \n\n"
-                     "                      [Deploy✔️](https://github.com/amitsharma123234/X-tra-TG-plus) \n\n",  link_preview=False
+                     "                      [Deploy✔️](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Famitsharma123234%2FX-tra-TG-plus&template=https%3A%2F%2Fgithub.com%2Famitsharma123234%2FX-tra-TG-plus) \n\n",  link_preview=False
                      )
