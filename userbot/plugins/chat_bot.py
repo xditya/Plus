@@ -28,7 +28,7 @@ if not bot_trained:
 	bot_trained = True   
 	print("Bot Trained")  
 
-@borg.on(events.NewMessage(pattern=r"\.chat", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"chut", outgoing=True))
 async def chat_bot(event):
 	if event.fwd_from:
 		return  
