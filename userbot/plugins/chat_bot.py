@@ -11,7 +11,7 @@ import asyncio
 from chatterbot import ChatBot 
 from chatterbot.trainers import ChatterBotCorpusTrainer
 import os
-from userbot.uniborgConfig import Config
+from sample_config import Config
 from platform import python_version, uname
 
 # ================= CONSTANT =================
@@ -28,7 +28,7 @@ if not bot_trained:
 	bot_trained = True   
 	print("Bot Trained")  
 
-@borg.on(events.NewMessage(pattern=r"chut", outgoing=True))
+@borg.on(events.NewMessage(pattern="chut", outgoing=True))
 async def chat_bot(event):
 	if event.fwd_from:
 		return  
