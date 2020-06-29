@@ -11,7 +11,7 @@ import asyncio
 from chatterbot import ChatBot 
 from chatterbot.trainers import ChatterBotCorpusTrainer
 import os
-from sample_config import Config
+from userbot.uniborgConfig import Config
 from platform import python_version, uname
 
 # ================= CONSTANT =================
