@@ -105,6 +105,7 @@ class Config(object):
     AUTOPIC_COMMENT = os.environ.get("AUTOPIC_COMMENT", "")
     # define "spam" in PMs
     MAX_FLOOD_IN_P_M_s = os.environ.get("MAX_FLOOD_IN_P_M_s", None)
+    MONGO_URI = os.environ.get("MONGO_URI", None)
     # leave this blank, should be automatically filled for Heroku.com users
     PM_LOGGR_BOT_API_ID = os.environ.get("PM_LOGGR_BOT_API_ID", None)
     if PM_LOGGR_BOT_API_ID:
