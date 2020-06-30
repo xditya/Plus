@@ -198,7 +198,7 @@ async def chat_bot_update(event):
 				msg = str(event.text)
 				reply = bot.get_response(msg)
 				logging.info(reply)
-				await event.reply("**Jas's Bot:\n"+str(reply)+"**")
+				await event.reply(f"**{DEFAULTUSER}'s Bot:\n"+str(reply)+"**")
 	if not event.text:
 		return
 	for cht in learn_chats:		
