@@ -5,10 +5,12 @@ from pySmartDL import SmartDL
 from telethon.tl import functions
 import asyncio
 import shutil
-from userbot import AUTOPIC_COMMENT, AUTOPIC_COLOUR
+from userbot import AUTOPIC_COMMENT
+from userbot.plugins.sql_helper.global_variables_sql import AUTOPIC_COLOUR
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 AUTOPIC_STR = str(AUTOPIC_COMMENT) if AUTOPIC_COMMENT else "Life Is too Short.\n And so is TG account."
+AUTOPIC_COLOUR = str(AUTOPIC_FONT_COLOUR) if AUTOPIC_FONT_COLOUR else "255, 255, 255"
 
 @command(pattern="^.autopic", outgoing=True)
 async def autopic(event):
