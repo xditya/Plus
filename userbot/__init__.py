@@ -145,6 +145,8 @@ if bool(ENV):
 
     # Autopic
     AUTOPIC_COMMENT = os.environ.get("AUTOPIC_COMMENT", "")
+    AUTOPIC_FONT_COLOUR = os.environ.get("AUTOPIC_FONT_COLOUR", "")
+    AUTOPIC_FONT = os.environ.get("AUTOPIC_FONT", "")
     
     # Mongo
     MONGO_URI = os.environ.get("MONGO_URI", "")
