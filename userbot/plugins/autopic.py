@@ -6,7 +6,7 @@ from telethon.tl import functions
 import asyncio
 import shutil
 from userbot import AUTOPIC_COMMENT
-from userbot.plugins.sql_helper.global_variables_sql import AUTOPIC_FONT
+from userbot.plugins.sql_helper.global_variables_sql import AUTO_PIC_FONT
 from userbot.utils import admin_cmd
 
 FONT_FILE_TO_USE = f"/fonts/{AUTOPIC_FONT}"
