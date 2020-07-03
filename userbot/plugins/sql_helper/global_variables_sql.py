@@ -5,7 +5,7 @@ import asyncio
 from telethon import events, version
 from telethon.tl.types import ChannelParticipantsAdmins
 from platform import python_version, uname
-from userbot import ALIVE_NAME, AUTOPIC_FONT_COLOUR, AUTOPIC_FONT
+from userbot import ALIVE_NAME
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No name set yet."
 
@@ -15,8 +15,6 @@ ALIVESTR = [f"█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█ \n█
 	f"╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗\n║║║╠─║─║─║║║║║╠─\n╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝\n{ALIVE}",
 	f"╔╦═╦╗\n║║║║╠═╦╗╔═╦═╦══╦═╗\n║║║║║╩╣╚╣═╣╬║║║║╩╣\n╚═╩═╩═╩═╩═╩═╩╩╩╩═╝\n{ALIVE}",
 	f"╭╮╭╮╭╮╱╱╭╮\n┃┃┃┃┃┃╱╱┃┃\n┃┃┃┃┃┣━━┫┃╭━━┳━━┳╮╭┳━━╮\n┃╰╯╰╯┃┃━┫┃┃╭━┫╭╮┃╰╯┃┃━┫\n╰╮╭╮╭┫┃━┫╰┫╰━┫╰╯┃┃┃┃┃━┫\n╱╰╯╰╯╰━━┻━┻━━┻━━┻┻┻┻━━╯\n{ALIVE}"]
-	
-AUTOPIC_COLOUR = str(AUTOPIC_FONT_COLOUR) if AUTOPIC_FONT_COLOUR else "255, 255, 255"
 	
 LOGGER = Config.PRIVATE_GROUP_BOT_API_ID
 BLACKLIST = Config.UB_BLACK_LIST_CHAT
