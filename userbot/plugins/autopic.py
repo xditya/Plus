@@ -5,7 +5,7 @@ from pySmartDL import SmartDL
 from telethon.tl import functions
 import asyncio
 import shutil
-from userbot import AUTOPIC_COMMENT
+from userbot import AUTOPIC_COMMENT, AUTOPIC_COLOUR
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 AUTOPIC_STR = str(AUTOPIC_COMMENT) if AUTOPIC_COMMENT else "Life Is too Short.\n And so is TG account."
@@ -28,7 +28,7 @@ async def autopic(event):
         img = Image.open(photo)
         drawn_text = ImageDraw.Draw(img)
         fnt = ImageFont.truetype(FONT_FILE_TO_USE, 30)
-        drawn_text.text((95, 250), current_time, font=fnt, fill=(255, 255, 255))
+        drawn_text.text((95, 250), current_time, font=fnt, fill=(f{AUTOPIC_COLOUR}))
         img.save(photo)
         file = await bot.upload_file(photo)  # pylint:disable=E0602
         try:
