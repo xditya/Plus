@@ -5,7 +5,7 @@ import asyncio
 from telethon import events, version
 from telethon.tl.types import ChannelParticipantsAdmins
 from platform import python_version, uname
-from userbot import ALIVE_NAME
+from userbot import ALIVE_NAME, AUTOPIC_FONT_COLOUR, AUTOPIC_FONT
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No name set yet."
 
