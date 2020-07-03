@@ -6,10 +6,10 @@ from telethon.tl import functions
 import asyncio
 import shutil
 from userbot import AUTOPIC_COMMENT
-from userbot.plugins.sql_helper.global_variables_sql import AUTO_PIC_FONT
 from userbot.utils import admin_cmd
+from userbot.plugins.sql_helper.global_variables_sql import AUTO_PIC_FONT
 
-FONT_FILE_TO_USE = f"/fonts/{AUTO_PIC_FONT}"
+FONT_FILE_TO_USE = f"fonts/{AUTO_PIC_FONT}"
 AUTOPIC_STR = str(AUTOPIC_COMMENT) if AUTOPIC_COMMENT else "Life Is too Short.\n And so is TG account."
 
 @borg.on(admin_cmd(pattern="autopic"))
