@@ -16,7 +16,7 @@ ALIVESTR = [f"█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█ \n█
 	f"╔╦═╦╗\n║║║║╠═╦╗╔═╦═╦══╦═╗\n║║║║║╩╣╚╣═╣╬║║║║╩╣\n╚═╩═╩═╩═╩═╩═╩╩╩╩═╝\n{ALIVE}",
 	f"╭╮╭╮╭╮╱╱╭╮\n┃┃┃┃┃┃╱╱┃┃\n┃┃┃┃┃┣━━┫┃╭━━┳━━┳╮╭┳━━╮\n┃╰╯╰╯┃┃━┫┃┃╭━┫╭╮┃╰╯┃┃━┫\n╰╮╭╮╭┫┃━┫╰┫╰━┫╰╯┃┃┃┃┃━┫\n╱╰╯╰╯╰━━┻━┻━━┻━━┻┻┻┻━━╯\n{ALIVE}"]
 	
-AUTOPIC_COLOUR = str(AUTOPIC_FONT_COLOUR) if AUTOPIC_FONT_COLOUR else "255, 255, 255"
+AUTO_PIC_FONT = str(AUTOPIC_FONT) if AUTOPIC_FONT else "DejaVuSansMono.ttf"
 	
 LOGGER = Config.PRIVATE_GROUP_BOT_API_ID
 BLACKLIST = Config.UB_BLACK_LIST_CHAT
