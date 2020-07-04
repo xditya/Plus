@@ -1,3 +1,5 @@
+# Modded by @buddhhu
+
 import os
 from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
@@ -32,13 +34,8 @@ async def autopic(event):
         fnt = ImageFont.truetype(FONT_FILE_TO_USE, 30)
         drawn_text.text((95, 250), current_time, font=fnt, fill=(0, 0, 0))
         img.save(photo)
-        file = await bot.upload_file(photo)  # pylint:disable=E0602
-        try:
-            await bot(functions.photos.UploadProfilePhotoRequest(  # pylint:disable=E0602
-                file
-            ))
-            os.remove(photo)
-            counter -= 0
-            await asyncio.sleep(60)
-        except:
-            return
+        file = await bot.upload_file(photo)
+        await event.client(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=1)))
+        await event.client(functions.photos.UploadProfilePhotoRequest( file))
+        os.remove(poto)
+        await asyncio.sleep(60)
