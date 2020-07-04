@@ -122,8 +122,8 @@
     "AUTH_TOKEN_DATA": {
       "description": "Let it be none till you get your auth token data by following https://da.gd/so63O",
       "value": "None"
-    },
-  }
+    }
+  },
   "addons": [{
     "plan": "heroku-postgresql",
     "options": {
