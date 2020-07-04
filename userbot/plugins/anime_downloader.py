@@ -31,7 +31,7 @@ async def download_file(url,filename):
 			handle.write(chunk)
 	handle.close()   
 
-@borg.on(events.NewMessage(pattern=r"\.anid", outgoing=True))
+@borg.on(admin_cmd(pattern="anid"))
 async def anime_download(event):
 	urls = []
 	url_links = []
