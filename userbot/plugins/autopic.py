@@ -37,5 +37,5 @@ async def autopic(event):
         file = await bot.upload_file(photo)
         await event.client(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=1)))
         await event.client(functions.photos.UploadProfilePhotoRequest( file))
-        os.remove(poto)
+        os.remove(photo)
         await asyncio.sleep(60)
