@@ -4,7 +4,6 @@
 import os
 from telethon.tl.types import ChatBannedRights
 from pymongo import MongoClient
-from redis import StrictRedis
 
 class Config(object):
     LOGGER = True
