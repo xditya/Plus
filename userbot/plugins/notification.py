@@ -323,17 +323,3 @@ async def do_log_pm_action(chat_id, message_text, message_media):
         silent=True
     )
    
-@bot.on(events.NewMessage(outgoing=True))
-async def you_dm_niqq(event):
-	if event.fwd_from:
-		return
-		chat = await event.get_chat()
-		if event.is_private:
-			if not pmpermit_sql.is_approved(chat.id):
-				if not chat.id in PM_WARNS:
-					pmpermit_sql.approve(chat.id, "outgoing")
-                    bruh = "__Added user to approved pms cuz outgoing message >~<__"
-                    rko = await borg.send_message(event.chat_id, bruh)
-                    await asyncio.sleep(3)
-                    await rko.delete()
-
