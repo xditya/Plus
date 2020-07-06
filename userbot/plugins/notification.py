@@ -276,38 +276,35 @@ async def _(event):
         logger.info(event.stringify())"""
 
 async def do_pm_permit_action(chat_id, event):
-	if chat_id not in PM_WARNS:
-		PM_WARNS.update({chat_id: 0})
-		if PM_WARNS[chat_id] == Config.MAX_FLOOD_IN_P_M_s:
-			r = await event.reply(USER_BOT_WARN_ZERO)
-			await asyncio.sleep(3)
-            await event.client(functions.contacts.BlockRequest(chat_id))
-            if chat_id in PREV_REPLY_MESSAGE:
-            	await PREV_REPLY_MESSAGE[chat_id].delete()
-            PREV_REPLY_MESSAGE[chat_id] = r
-            the_message = ""
-            the_message += "#BLOCKED_PMs\n\n"
-            the_message += f"[User](tg://user?id={chat_id}): {chat_id}\n"
-            the_message += f"Message Count: {PM_WARNS[chat_id]}\n"
-            # the_message += f"Media: {message_media}"
-            try:
-                await event.client.send_message(
-                    entity=Var.PRIVATE_GROUP_ID,
-                    message=the_message,
-                    # reply_to=,
-                    # parse_mode="html",
-                    link_preview=False,
-                    # file=message_media,
-                    silent=True
-                )
-                return
-            except:
-                return
-        r = await event.reply(USER_BOT_NO_WARN)
-        PM_WARNS[chat_id] += 1
+    if chat_id not in PM_WARNS:
+        PM_WARNS.update({chat_id: 0})
+    if PM_WARNS[chat_id] == Config.MAX_FLOOD_IN_P_M_s:
+        r = await event.reply(UNIBORG_USER_BOT_WARN_ZERO)
+        await asyncio.sleep(3)
+        await borg(functions.contacts.BlockRequest(chat_id))
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
         PREV_REPLY_MESSAGE[chat_id] = r
+        the_message = ""
+        the_message += "#BLOCKED_PMs\n\n"
+        the_message += f"[User](tg://user?id={chat_id}): {chat_id}\n"
+        the_message += f"Message Count: {PM_WARNS[chat_id]}\n"
+        # the_message += f"Media: {message_media}"
+        await borg.send_message(
+            entity=Config.PM_LOGGR_BOT_API_ID,
+            message=the_message,
+            # reply_to=,
+            # parse_mode="html",
+            link_preview=False,
+            # file=message_media,
+            silent=True
+        )
+        return
+    r = await event.reply(UNIBORG_USER_BOT_NO_WARN)
+    PM_WARNS[chat_id] += 1
+    if chat_id in PREV_REPLY_MESSAGE:
+        await PREV_REPLY_MESSAGE[chat_id].delete()
+    PREV_REPLY_MESSAGE[chat_id] = r
 
 
 async def do_log_pm_action(chat_id, message_text, message_media):
