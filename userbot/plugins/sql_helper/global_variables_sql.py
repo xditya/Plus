@@ -5,7 +5,7 @@ import asyncio
 from telethon import events, version
 from telethon.tl.types import ChannelParticipantsAdmins
 from platform import python_version, uname
-from userbot import ALIVE_NAME, AUTOPIC_FONT_COLOUR, AUTOPIC_FONT
+from userbot import ALIVE_NAME, AUTOPIC_FONT_COLOUR, AUTOPIC_FONT, AUTOPIC_COMMENT
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No name set yet."
 
@@ -17,11 +17,13 @@ ALIVESTR = [f"█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█ \n█
 	f"╭╮╭╮╭╮╱╱╭╮\n┃┃┃┃┃┃╱╱┃┃\n┃┃┃┃┃┣━━┫┃╭━━┳━━┳╮╭┳━━╮\n┃╰╯╰╯┃┃━┫┃┃╭━┫╭╮┃╰╯┃┃━┫\n╰╮╭╮╭┫┃━┫╰┫╰━┫╰╯┃┃┃┃┃━┫\n╱╰╯╰╯╰━━┻━┻━━┻━━┻┻┻┻━━╯\n{ALIVE}"]
 	
 AUTO_PIC_FONT = str(AUTOPIC_FONT) if AUTOPIC_FONT else "DejaVuSansMono.ttf"
+FONT_FILE_TO_USE = f"fonts/{AUTO_PIC_FONT}"
+AUTOPIC_STR = str(AUTOPIC_COMMENT) if AUTOPIC_COMMENT else "Life Is too Short.\n And so is TG account."
+COLOUR = str(AUTOPIC_FONT_COLOUR) if AUTOPIC_FONT_COLOUR else "#000000"
 	
 LOGGER = Config.PRIVATE_GROUP_BOT_API_ID
 BLACKLIST = Config.UB_BLACK_LIST_CHAT
 SYNTAX = {}
-MODULE = []
 SUDO_USERS = Config.SUDO_USERS
 COUNT_MSG = 0
 USERS = {}
