@@ -96,6 +96,7 @@ class Config(object):
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
     # Set to True if you want to block users that are spamming your PMs.
     NO_P_M_SPAM = bool(os.environ.get("NO_P_M_SPAM", False))
+    PLUGIN_CHANNEL = os.environ.get("PLUGIN_CHANNEL", "")
     # define "spam" in PMs
     MAX_FLOOD_IN_P_M_s = int(os.environ.get("MAX_FLOOD_IN_P_M_s", 3))
     # set to True if you want to log PMs to your PM_LOGGR_BOT_API_ID
@@ -165,9 +166,9 @@ class Config(object):
     CHROME_DRIVER = os.environ.get("CHROME_DRIVER", None)
     CHROME_BIN = os.environ.get("CHROME_BIN", None)
     # define "repo_link" in conig_vars
-    REPO_LINK = os.environ.get("REPO_LINK", "https://github.com/mkaraniya/BotHub.git")
+    REPO_LINK = os.environ.get("REPO_LINK", "https://github.com/amitsharma123234/X-tra-TG-plus.git")
     # define "UPSTREAM_REPO_URL" in conig_vars
-    UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/mkaraniya/BotHub.git")
+    UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/amitsharma123234/X-tra-TG-plus.git")
     # define "HEROKU_GIT_URL" | https://git.heroku.com/YOUR_HEROKU_APP_NAME.git
     HEROKU_GIT_URL = os.environ.get("HEROKU_GIT_URL", "YOUR HEROKU GIT URL")
     # define "heroku_link" in conig_vars 
