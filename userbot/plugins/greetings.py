@@ -34,23 +34,27 @@ async def lol(event):
 
 @borg.on(admin_cmd(pattern="sudogn", allow_sudo=True))
 async def gn(event):
-    await event.reply(f"{GN}")
+    a = await event.reply(f"{GN}")
     await asyncio.sleep(DEL_TIMEOUT)
+    await a.delete()
     
 
 @borg.on(admin_cmd(pattern="sudogm", allow_sudo=True))
 async def gm(event):
-    await event.reply(f"{GM}")
+    a = await event.reply(f"{GM}")
     await asyncio.sleep(DEL_TIMEOUT)
+    await a.delete()
 
 
 @borg.on(admin_cmd(pattern="sudolike", allow_sudo=True))
 async def like(event):
-    await event.reply(f"{LIKE}")
+    a = await event.reply(f"{LIKE}")
     await asyncio.sleep(DEL_TIMEOUT)
+    await a.delete()
 
 
 @borg.on(admin_cmd(pattern="sudolol", allow_sudo=True))
 async def lol(event):
-    await event.reply(f"{LOL}")
+    a = await event.reply(f"{LOL}")
     await asyncio.sleep(DEL_TIMEOUT)
+    await a.delete()
