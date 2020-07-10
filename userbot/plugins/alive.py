@@ -1,13 +1,34 @@
-import random
-from userbot.plugins.sql_helper.global_variables_sql import ALIVESTR
+import os
+from userbot.plugins.sql_helper.global_variables_sql import ALIVE, ALIVESTR
 from userbot.utils import admin_cmd
 
+ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
+PLUSPIC = ALIVE_PIC
+
 @borg.on(admin_cmd(pattern="alive"))
-async def alive(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
-        await event.edit(random.choice(ALIVESTR))
-        
-@borg.on(admin_cmd(pattern="sudoalive", allow_sudo=True))
-async def sudo(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
-        await event.reply(random.choice(ALIVESTR))
+async def iamalive(alive):
+    if alive.fwd_from:
+        return
+    reply_to_id = alive.message
+    if alive.reply_to_msg_id:
+        reply_to_id = await alive.get_reply_message()
+    
+    if PLUSPIC:
+    	await borg.send_file(alive.chat_id, PLUSPic, caption=ALIVE)
+    	await alive.delete()
+    else:
+    	await alive.edit(f"{ALIVESTR}")
+
+@borg.on(admin_cmd(pattern="sudo", allow_sudo=True))
+async def iamalive(alive):
+    if alive.fwd_from:
+        return
+    reply_to_id = alive.message
+    if alive.reply_to_msg_id:
+        reply_to_id = await alive.get_reply_message()
+    
+    if PLUSPIC:
+      await borg.send_file(alive.chat_id, PLUSPIC, caption=ALIVE)
+      await alive.delete()
+    else:
+      await alive.reply(f"{ALIVESTR}")
