@@ -1,11 +1,12 @@
 import os
-from userbot.plugins.sql_helper.global_variables_sql import ALIVESTR, DEFAULTUSER
+from userbot import ALIVE_NAME
 from userbot.utils import admin_cmd, get_readable_time as grt
 from platform import python_version, uname
 import time
 from userbot import UpTime
 from telethon import events, version
 
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No name set yet."
 ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
 PLUSPIC = ALIVE_PIC
 uptime = grt((time.time() - UpTime))
