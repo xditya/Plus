@@ -25,7 +25,7 @@ async def iamalive(alive):
     	await borg.send_file(alive.chat_id, PLUSPIC, caption=ALIVE)
     	await alive.delete()
     else:
-    	await alive.edit(f"{ALIVESTR}")
+    	await alive.edit(f"{ALIVE}")
 
 @borg.on(admin_cmd(pattern="sudo", allow_sudo=True))
 async def iamalive(alive):
@@ -39,4 +39,4 @@ async def iamalive(alive):
       await borg.send_file(alive.chat_id, PLUSPIC, caption=ALIVE)
       await alive.delete()
     else:
-      await alive.reply(f"{ALIVESTR}")
+      await alive.reply(f"{ALIVE}")
