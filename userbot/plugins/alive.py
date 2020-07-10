@@ -14,7 +14,7 @@ async def iamalive(alive):
         reply_to_id = await alive.get_reply_message()
     
     if PLUSPIC:
-    	await borg.send_file(alive.chat_id, PLUSPic, caption=ALIVE)
+    	await borg.send_file(alive.chat_id, PLUSPIC, caption=ALIVE)
     	await alive.delete()
     else:
     	await alive.edit(f"{ALIVESTR}")
