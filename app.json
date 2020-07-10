@@ -105,7 +105,7 @@
       "value": ""
     },
     "AUTOPIC_COMMENT": {
-      "description": "Comment shown with time and datebin autopic",
+      "description": "Comment shown with time and date in autopic",
       "value": "",
       "required": false
     },
@@ -127,7 +127,7 @@
   "addons": [{
     "plan": "heroku-postgresql",
     "options": {
-      "version": "9.5"
+      "version": "12"
     }
   }],
   "buildpacks": [{
