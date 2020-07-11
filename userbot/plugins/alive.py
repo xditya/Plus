@@ -27,7 +27,7 @@ async def iamalive(alive):
     else:
     	await alive.edit(f"{ALIVE}")
 
-@borg.on(admin_cmd(pattern="sudo", allow_sudo=True))
+@borg.on(admin_cmd(pattern="sudoalive", allow_sudo=True))
 async def iamalive(alive):
     if alive.fwd_from:
         return
