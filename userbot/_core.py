@@ -9,12 +9,12 @@ import sys
 import asyncio
 import traceback
 import os
-from userbot import utils
+import userbot.utils
 from datetime import datetime
 
 DELETE_TIMEOUT = 5
 
-@borg.on(admin_cmd(pattern="import", outgoing=True))
+@command(pattern="^.import", outgoing=True)
 async def install(event):
     if event.fwd_from:
         return
@@ -38,7 +38,7 @@ async def install(event):
     await asyncio.sleep(DELETE_TIMEOUT)
     await event.delete()
 
-@borg.on(admin_cmd(pattern="send (?P<shortname>\w+)$", outgoing=True))
+@command(pattern="^.send (?P<shortname>\w+)$", outgoing=True)
 async def send(event):
     if event.fwd_from:
         return
@@ -59,7 +59,7 @@ async def send(event):
     await asyncio.sleep(DELETE_TIMEOUT)
     await event.delete()
 
-@borg.on(admin_cmd(pattern="unload (?P<shortname>\w+)$", outgoing=True))
+@command(pattern="^.unload (?P<shortname>\w+)$", outgoing=True)
 async def unload(event):
     if event.fwd_from:
         return
@@ -70,7 +70,7 @@ async def unload(event):
     except Exception as e:
         await event.edit("Successfully unload {shortname}\n{}".format(shortname, str(e)))
 
-@borg.on(admin_cmd(pattern="load (?P<shortname>\w+)$", outgoing=True))
+@command(pattern="^.load (?P<shortname>\w+)$", outgoing=True)
 async def load(event):
     if event.fwd_from:
         return
