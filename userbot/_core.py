@@ -9,7 +9,7 @@ import sys
 import asyncio
 import traceback
 import os
-from userbot.utils import admin_cmd
+from userbot import utils
 from datetime import datetime
 
 DELETE_TIMEOUT = 5
