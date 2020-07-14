@@ -23,11 +23,27 @@
       "required": false
     },
     "APP_ID": {
-      "description": "Get this value from my.telegram.org! Please do not steal",
+      "description": "Get this value from my.telegram.org or @usetgxbot. Please do not steal",
       "value": ""
     },
     "API_HASH": {
-      "description": "Get this value from my.telegram.org! Please do not steal",
+      "description": "Get this value from my.telegram.org or @usetgxbot. Please do not steal",
+      "value": ""
+    },
+    "BOTLOG_CHATID": {
+      "description": "Create a private group adding @missrose_bot. Send /id and paste that value here...",
+      "value": ""
+    },
+    "PRIVATE_GROUP_BOT_API_ID": {
+      "description": "Same value as BOTLOG_CHATID",
+      "value": ""
+    },
+    "PRIVATE_GROUP_ID": {
+      "description": "Same value as BOTLOG_CHATID",
+      "value": ""
+    },
+    "PM_LOGGR_BOT_API_ID": {
+      "description": "Same value as BOTLOG_CHATID",
       "value": ""
     },
     "STRING_SESSION": {
@@ -55,7 +71,7 @@
       "required": false
     },
     "GIT_REPO_NAME": {
-      "description": "Your repo name Example: Total-Noob-69/X-Tra-Telegram, but GITHUB_ACCESS_TOKEN must be setup first.",
+      "description": "Your repo name Example: amitsharma123234/X-tra-TG-plus, but GITHUB_ACCESS_TOKEN must be setup first.",
       "value": "",
       "required": false
     },
