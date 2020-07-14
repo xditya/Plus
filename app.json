@@ -113,12 +113,13 @@
       "value": "Asia/Kolkata"
     },
     "COUNTRY": {
-      "description": "Required for Correct Time on autopic/get time. Know your timezone from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
+      "description": "Your country name.",
       "value": "India"
     },
     "AUTONAME_NAME": {
       "description": "Required for Name on autoname plugin",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "AUTOPIC_COMMENT": {
       "description": "Comment shown with time and date in autopic",
@@ -132,6 +133,16 @@
     },
     "MASTERS_MSG": {
       "description": "This will be shown when you go afk with reason",
+      "value": "",
+      "required": false
+    },
+    "ALIVE_NAME": {
+      "description": "Used for .alive",
+      "value": "",
+      "required": false
+    },
+    "ALIVE_PIC": {
+      "description": "Used for .alive",
       "value": "",
       "required": false
     },
