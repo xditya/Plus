@@ -2,3 +2,6 @@ jq
 pv
 pkg-config
 libav-tools
+libsqlite3-dev
+chromium-driver
+google-chrome-stable
