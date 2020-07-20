@@ -66,3 +66,4 @@ if 1 == 1:
             else:
                 await event.edit("`No photo found of that Nigga , now u Die`")
                 return
+              await event.delete()
