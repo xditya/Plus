@@ -65,5 +65,6 @@ if 1 == 1:
                 await borg.send_file(event.chat_id, send_photos)
             else:
                 await event.edit("`No photo found of that Nigga , now u Die`")
+                await event.delete()
                 return
-              await event.delete()
+              
