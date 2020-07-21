@@ -16,6 +16,7 @@ COLOUR = str(AUTOPIC_FONT_COLOUR) if AUTOPIC_FONT_COLOUR else (255, 255, 255)
 
 @borg.on(admin_cmd(pattern="autopic"))
 async def autopic(event):
+	await event.edit("**Autopic has been enabled!!!**")
 	downloaded_file_name = "userbot/original_pic.png"
 	downloader = SmartDL(Var.DOWNLOAD_PFP_URL_CLOCK, downloaded_file_name, progress_bar=False)
 	downloader.start(blocking=False)
@@ -34,10 +35,9 @@ async def autopic(event):
 		color = (COLOUR)
 		drawn_text.text((95, 250), current_time, font=fnt, fill=color)
 		img.save(photo)
-		file = await bot.upload_file(photo)  # pylint:disable=E0602
+		file = await bot.upload_file(photo)
 		try:
 			await bot(functions.photos.UploadProfilePhotoRequest(file))
-			await event.edit("**Autopic has been enabled!!!**")
 			os.remove(photo)
 			counter -= 30
 			await asyncio.sleep(60)
