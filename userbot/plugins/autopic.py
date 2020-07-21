@@ -8,7 +8,11 @@ from telethon.tl import functions
 import asyncio
 import shutil
 from userbot.utils import admin_cmd
-from userbot.plugins.sql_helper.global_variables_sql import FONT_FILE_TO_USE, AUTOPIC_STR, COLOUR
+from userbot.plugins.sql_helper.global_variables_sql import FONT_FILE_TO_USE, AUTOPIC_STR, COLOUR, AUTO_PIC_FONT, AUTOPIC_COMMENT, AUTOPIC_FONT_COLOUR
+
+FONT_FILE_TO_USE = f"fonts/{AUTO_PIC_FONT}"
+AUTOPIC_STR = str(AUTOPIC_COMMENT) if AUTOPIC_COMMENT else "Life Is too Short.\n And so is TG account."
+COLOUR = str(AUTOPIC_FONT_COLOUR) if AUTOPIC_FONT_COLOUR else (255, 255, 255)
 
 @borg.on(admin_cmd(pattern="autopic"))
 async def autopic(event):
@@ -27,7 +31,8 @@ async def autopic(event):
 		img = Image.open(photo)
 		drawn_text = ImageDraw.Draw(img)
 		fnt = ImageFont.truetype(FONT_FILE_TO_USE, 30)
-		drawn_text.text((95, 250), current_time, font=fnt, fill=(255, 255, 255))
+		color = (COLOUR)
+		drawn_text.text((95, 250), current_time, font=fnt, fill=color)
 		img.save(photo)
 		file = await bot.upload_file(photo)  # pylint:disable=E0602
 		try:
