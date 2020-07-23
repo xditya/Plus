@@ -1,5 +1,3 @@
 jq
 pv
 pkg-config
-libsqlite3-dev
-chromium-driver
