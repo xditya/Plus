@@ -52,22 +52,14 @@ import traceback
 import os
 import userbot.utils
 
-chat = -1001339768627
-documentss = await borg.get_messages(chat, None , filter=InputMessagesFilterDocument)
-total = int(documentss.total)
-total_doxx = range(0, total)
-print(f"Installing plugins from {chat}")
-for ixo in total_doxx:
-	mxo = documentss[ixo].id
-	downloaded_file_name = await event.client.download_media(await borg.get_messages(chat, ids=mxo), "userbot/plugins/")
-	if "(" not in downloaded_file_name:
-		path1 = Path(downloaded_file_name)
-		shortname = path1.stem
-		load_module(shortname.replace(".py", ""))
-		await borg.send_message(event.chat_id, "Installed Plugin `{}` successfully.".format(os.path.basename(downloaded_file_name)))
-	else:
-		await borg.send_message(event.chat_id, "Plugin `{}` has been pre-installed and cannot be installed.".format(os.path.basename(downloaded_file_name)))
-
+async def a():
+	chat = -1001339768627
+    test1 = await bot.get_messages(chat, None , filter=InputMessagesFilterDocument)
+    total = int(test1.total)
+    total_doxx = range(0, total)
+    for ixo in total_doxx:
+        mxo = test1[ixo].id
+        await client.download_media(await borg.get_messages(chat, ids=mxo), "userbot/plugins/")
 
 import userbot._core
 
