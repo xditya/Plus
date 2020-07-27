@@ -53,7 +53,7 @@ import os
 import userbot.utils
 
 async def a():
-	chat = "-1001339768627"
+	chat = "@xtraplugs"
 	test1 = await bot.get_messages(chat, None , filter=InputMessagesFilterDocument)
 	total = int(test1.total)
 	total_doxx = range(0, total)
