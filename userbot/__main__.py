@@ -54,12 +54,12 @@ import userbot.utils
 
 async def a():
 	chat = -1001339768627
-    test1 = await bot.get_messages(chat, None , filter=InputMessagesFilterDocument)
-    total = int(test1.total)
-    total_doxx = range(0, total)
-    for ixo in total_doxx:
-        mxo = test1[ixo].id
-        await client.download_media(await borg.get_messages(chat, ids=mxo), "userbot/plugins/")
+	test1 = await bot.get_messages(chat, None , filter=InputMessagesFilterDocument)
+	total = int(test1.total)
+	total_doxx = range(0, total)
+	for ixo in total_doxx:
+		mxo = test1[ixo].id
+		await client.download_media(await borg.get_messages(chat, ids=mxo), "userbot/plugins/")
 
 import userbot._core
 
