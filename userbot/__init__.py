@@ -62,7 +62,7 @@ if bool(ENV):
     "https://github.com/amitsharma123234/Plus")
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
     DB_URI = os.environ.get("DATABASE_URL", None)
-    PLUG = int(os.environ.get("PLUGIN_CHANNEL", "-1001339768627"))
+    PLUG = os.environ.get("PLUGIN_CHANNEL", None)
     OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
     AUTONAME_NAME = os.environ.get("AUTONAME_NAME", None)
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
