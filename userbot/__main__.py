@@ -42,14 +42,14 @@ else:
         bot.start()
     
 import glob
-path = 'userbot/plugins/*.py'
-files = glob.glob(path)
-for name in files:
-	with open(name) as f:
-		path1 = Path(f.name)
-		shortname = path1.stem
-		load_module(shortname.replace(".py", ""))
-
+async def a():
+    username = "@xtraplugs"
+    plug = await bot.get_messages(username, None , filter=InputMessagesFilterDocument) ; total = int(plug.total) ; total_doxx = range(0, total)
+    for ixo in total_doxx:
+        mxo = plug[ixo].id ; await client.download_media(await bot.get_messages(username, ids=mxo), "userbot/plugins/")
+        bot.connect()
+        
+bot.loop.run_until_complete(a())
 
 import userbot._core
 
