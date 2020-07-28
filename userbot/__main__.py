@@ -42,9 +42,8 @@ else:
         bot.start()
     
 import glob
-INSTALLER = int(PLUG) if PLUG else "-1001339768627"
 async def main():
-	chat = INSTALLER
+	chat = Var.PLUGIN_CHANNEL
 	documentss = await bot.get_messages(chat, None , filter=InputMessagesFilterDocument)
 	total = int(documentss.total)
 	total_doxx = range(0, total)
