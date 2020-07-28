@@ -6,10 +6,14 @@ import os
 from telethon import TelegramClient
 from var import Var
 from userbot.utils import load_module
-from userbot import LOAD_PLUG, BOTLOG_CHATID, LOGS
+from userbot import LOAD_PLUG, BOTLOG_CHATID, LOGS, PLUG
 from pathlib import Path
 import asyncio
 import telethon.utils
+from telethon import events, functions, types
+from telethon.tl.types import InputMessagesFilterDocument
+import traceback
+import userbot.utils
 
 async def add_bot(bot_token):
     await bot.start(bot_token)
@@ -38,13 +42,20 @@ else:
         bot.start()
     
 import glob
-path = 'userbot/plugins/*.py'
-files = glob.glob(path)
-for name in files:
-    with open(name) as f:
-        path1 = Path(f.name)
-        shortname = path1.stem
-        load_module(shortname.replace(".py", ""))
+INSTALLER = int(PLUG) if PLUG else "-1001339768627"
+chat = INSTALLER
+documentss = await borg.get_messages(chat, None , filter=InputMessagesFilterDocument)
+total = int(documentss.total)
+total_doxx = range(0, total)
+await event.delete()
+for ixo in total_doxx:
+	mxo = documentss[ixo].id
+	downloaded_file_name = await event.client.download_media(await borg.get_messages(chat, ids=mxo), "userbot/plugins/")
+	if "(" not in downloaded_file_name:
+		path1 = Path(downloaded_file_name)
+		shortname = path1.stem
+		load_module(shortname.replace(".py", ""))
+
 
 import userbot._core
 
