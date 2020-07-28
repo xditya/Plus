@@ -42,15 +42,11 @@ else:
         bot.start()
     
 import glob
-async def main():
-	chat = Var.PLUGIN_CHANNEL
-	documentss = await bot.get_messages(chat, None , filter=InputMessagesFilterDocument)
-	total = int(documentss.total)
-	total_doxx = range(0, total)
-	for ixo in total_doxx:
-		mxo = documentss[ixo].id
-		downloaded_file_name = await bot.download_media(await bot.get_messages(chat, ids=mxo), "userbot/plugins/")
-		path1 = Path(downloaded_file_name)
+path = 'userbot/plugins/*.py'
+files = glob.glob(path)
+for name in files:
+	with open(name) as f:
+		path1 = Path(f.name)
 		shortname = path1.stem
 		load_module(shortname.replace(".py", ""))
 
