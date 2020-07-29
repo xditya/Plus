@@ -1,2 +1,2 @@
-Telethon
+telethon>=1.16.0
 -r ./requirements-startup.txt
