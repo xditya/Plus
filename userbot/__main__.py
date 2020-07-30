@@ -51,6 +51,8 @@ async def a():
         
 bot.loop.run_until_complete(a())
 
+os.system("cd ./userbot/plugins && unzip Plugin.zip && rm -rf ./userbot/Plugin.zip")
+
 import glob
 path = 'userbot/plugins/*.py'
 files = glob.glob(path)
