@@ -211,7 +211,7 @@ import math
 import subprocess
 import sys
 import traceback
-import datetime
+from datetime import datetime
 
 
 def register(**args):
