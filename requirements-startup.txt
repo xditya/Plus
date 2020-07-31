@@ -54,3 +54,4 @@ wikipedia>=1.4.0
 youtube-dl
 jikanpy
 psutil
+pyLyrics
