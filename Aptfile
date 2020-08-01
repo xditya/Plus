@@ -1,5 +1,3 @@
 jq
 pv
 pkg-config
-sudo
-gdebi-core
