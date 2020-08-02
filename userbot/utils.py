@@ -159,12 +159,11 @@ def admin_cmd(**args):
 
     # get the pattern from the decorator
     if pattern is not None:
-        if pattern.startswith("\#"):
-            # special fix for snip.py
-            args["pattern"] = re.compile(pattern)
-        else:
-            args["pattern"] = re.compile("\." + pattern)
-            cmd = "." + pattern
+    	if pattern.startswith("\#"):
+    		args["pattern"] = re.compile(pattern)
+    	else:
+    		args["pattern"] = re.compile(Var.COMMAND_HAND_LER + pattern)
+            cmd = Var.COMMAND_HAND_LER + pattern
             try:
                 CMD_LIST[file_test].append(cmd)
             except:
