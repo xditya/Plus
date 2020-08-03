@@ -163,7 +163,7 @@ def admin_cmd(**args):
     		args["pattern"] = re.compile(pattern)
     	else:
     		args["pattern"] = re.compile(Var.COMMAND_HAND_LER + pattern)
-            cmd = Var.COMMAND_HAND_LER + pattern
+            cmd = (Var.COMMAND_HAND_LER) + pattern
             try:
                     CMD_LIST[file_test].append(cmd)
                 except:
