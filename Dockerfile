@@ -27,7 +27,7 @@ RUN apt-get install -y\
     postgresql \
     postgresql-client \
     postgresql-server-dev-all \
-    #chromedriver \
+    axel \
     openssl \
     pv \
     jq \
