@@ -47,11 +47,9 @@ async def a():
     plug = await bot.get_messages(username, None , filter=InputMessagesFilterDocument) ; total = int(plug.total) ; total_doxx = range(0, total)
     for ixo in total_doxx:
         mxo = plug[ixo].id ; await bot.download_media(await bot.get_messages(username, ids=mxo), "userbot/plugins/")
-        bot.connect()
-        
 bot.loop.run_until_complete(a())
 
-os.system("cd ./userbot/plugins && unzip Plugin.zip && rm -rf Plugin.zip")
+os.system("cd ./userbot/plugins && unzip Plugin.zip")
 
 import glob
 path = 'userbot/plugins/*.py'
