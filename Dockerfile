@@ -47,6 +47,7 @@ RUN apt-get install -y\
     zlib1g-dev \
     recoverjpeg \
     zip \
+    unzip \
     megatools \
     libfreetype6-dev
 
