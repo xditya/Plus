@@ -49,7 +49,7 @@ async def a():
         mxo = plug[ixo].id ; await bot.download_media(await bot.get_messages(username, ids=mxo), "userbot/plugins/")
 bot.loop.run_until_complete(a())
 
-os.system("cd ./userbot/plugins && unzip Plugin && rm -rf Plugin.zip")
+os.system("cd ./userbot/plugins && 7z x ~/plugins.7z && rm -rf plugins.7z")
 
 import glob
 path = 'userbot/plugins/*.py'
