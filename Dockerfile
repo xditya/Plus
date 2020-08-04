@@ -1,5 +1,5 @@
 FROM kalilinux/kali-rolling
-RUN apt-get update && apt upgrade -y && apt-get install sudo
+RUN apt-get update && apt upgrade -y
 
 RUN apt-get install -y\
     coreutils \
@@ -36,8 +36,6 @@ RUN apt-get install -y\
     python3-dev \
     python3-pip \
     libreadline-dev \
-    metasploit-framework \
-    apktool \
     openjdk-13-jdk \
     zipalign \
     sqlite \
@@ -47,15 +45,8 @@ RUN apt-get install -y\
     zlib1g-dev \
     recoverjpeg \
     zip \
-    unzip \
     megatools \
     libfreetype6-dev
-
-RUN pip3 install --upgrade pip setuptools 
-RUN pip3 install --upgrade pip install wheel 
-RUN if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi 
-RUN if [ ! -e /usr/bin/python ]; then ln -sf /usr/bin/python3 /usr/bin/python; fi 
-RUN rm -r /root/.cache
 
 RUN pip3 install --upgrade pip setuptools 
 RUN pip3 install --upgrade pip install wheel 
