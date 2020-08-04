@@ -11,6 +11,7 @@ import traceback
 import os
 from datetime import datetime
 from userbot import utils
+borg = bot
 
 DELETE_TIMEOUT = 5
 
