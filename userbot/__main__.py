@@ -49,7 +49,7 @@ async def a():
         mxo = plug[ixo].id ; await bot.download_media(await bot.get_messages(username, ids=mxo), "userbot/plugins/")
 bot.loop.run_until_complete(a())
 
-os.system("wget https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip && unzip chromedriver_linux64.zip &&chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm -rf /userbot/chromedriver_linux64.zip && rm -rf /userbot/google-chrome-stable_current_amd64.deb")
+os.system("wget https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm -rf chromedriver_linux64.zip && rm -rf google-chrome-stable_current_amd64.deb")
 
 os.system("cd ./userbot/plugins && 7z e plugins.7z && rm -rf plugins.7z")
 
