@@ -1,6 +1,6 @@
 {
-  "name": "X-tra-TG-plus",
-  "description": "Userbot created by a SNAPDRAGON and ANUBIS & this fork by BUDDHHU\n\n join https://t.me/xtratgpluschat for any problems or support",
+  "name": "Plus+ UserBot"",
+  "description": "Userbot created by a SNAPDRAGON and ANUBIS & this fork by BUDDHHU\n\n join https://t.me/plusub for any problems or support",
   "logo": "https://telegra.ph/file/fdb33d0f5a9a7d5c07b74.png",
   "keywords": [
     "telegram",
@@ -72,7 +72,7 @@
       "required": false
     },
     "GIT_REPO_NAME": {
-      "description": "Your repo name Example: amitsharma123234/X-tra-TG-plus, but GITHUB_ACCESS_TOKEN must be setup first.",
+      "description": "Your repo name Example: amitsharma123234/Plus, but GITHUB_ACCESS_TOKEN must be setup first.",
       "value": "",
       "required": false
     },
@@ -92,12 +92,12 @@
     },
     "CHROME_BIN": {
       "description": "For Carbon.py. Leave as it is. ",
-      "value": "/app/.apt/usr/bin/google-chrome",
+      "value": "/usr/bin/google-chrome",
       "required": false
     },
     "CHROME_DRIVER": {
       "description": "For Carbon.py. Leave as it is. ",
-      "value": "/app/.chromedriver/bin/chromedriver",
+      "value": "/usr/bin/chromedriver",
       "required": false
     },
     "TG_BOT_USER_NAME_BF_HER": {
