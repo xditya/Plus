@@ -32,9 +32,7 @@ RUN apt-get install -y\
     pv \
     jq \
     wget \
-    python3 \
     python3-dev \
-    python3-pip \
     libreadline-dev \
     openjdk-13-jdk \
     zipalign \
@@ -46,10 +44,15 @@ RUN apt-get install -y\
     recoverjpeg \
     zip \
     megatools \
-    libfreetype6-dev
+    libfreetype6-dev \
+    sudo \
+    chromium \
+    chromium-chromedriver
 
 RUN pip3 install --upgrade pip setuptools 
 RUN pip3 install --upgrade pip install wheel 
+RUN if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi 
+RUN if [ ! -e /usr/bin/python ]; then ln -sf /usr/bin/python3 /usr/bin/python; fi 
 RUN rm -r /root/.cache
 
 RUN git clone https://github.com/amitsharma123234/Plus /root/userbot
