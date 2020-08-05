@@ -58,5 +58,6 @@ RUN git clone https://github.com/amitsharma123234/Plus /root/userbot
 RUN mkdir /root/userbot/bin/
 WORKDIR /root/userbot/
 RUN chmod +x /usr/local/bin/*
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb
 RUN pip3 install -r requirements.txt
 CMD ["python3","-m","userbot"]
