@@ -32,7 +32,9 @@ RUN apt-get install -y\
     pv \
     jq \
     wget \
+    python3 \
     python3-dev \
+    python3-pip \
     libreadline-dev \
     openjdk-13-jdk \
     zipalign \
@@ -44,10 +46,7 @@ RUN apt-get install -y\
     recoverjpeg \
     zip \
     megatools \
-    libfreetype6-dev \
-    sudo \
-    chromium 
-
+    libfreetype6-dev
 
 RUN pip3 install --upgrade pip setuptools 
 RUN pip3 install --upgrade pip install wheel 
