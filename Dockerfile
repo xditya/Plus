@@ -46,8 +46,8 @@ RUN apt-get install -y\
     megatools \
     libfreetype6-dev \
     sudo \
-    chromium \
-    chromium-chromedriver
+    chromium 
+
 
 RUN pip3 install --upgrade pip setuptools 
 RUN pip3 install --upgrade pip install wheel 
